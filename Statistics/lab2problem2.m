@@ -1,0 +1,1 @@
+n=input("Inumber of values = ")p=input('"probability=  "')v=0:1:ny=binopdf(v,n,p)figure(1);plot(v,y, "*r")w = 0: 0.01: n;z = binocdf(w, n, p);figure(2);plot(w, z, 'r');

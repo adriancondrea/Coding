@@ -19,7 +19,7 @@ for i in range(size):
 # The obscure struct_addr is elegantly replaced by
 # a simple pair - very convenient. Replace the IP Address with
 # the one of your server
-s.connect( ("192.168.100.4",1234) )
+s.connect( ("192.168.100.30",1234) )
 
 # pack the value of a as a short int (16 bits) in network representation
 res = s.send(struct.pack("!H", size))
