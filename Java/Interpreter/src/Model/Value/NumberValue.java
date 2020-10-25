@@ -6,12 +6,12 @@ import Model.Type.Type;
 public class NumberValue implements Value{
     int value;
 
-    NumberValue(int value){
+    public NumberValue(int value){
         this.value = value;
     }
 
     //default constructor
-    NumberValue(){
+    public NumberValue(){
         value = 0;
     }
 

@@ -29,4 +29,8 @@ public class ProgramState {
     public void setOutputList(ListInterface<Value> outputList) {
         this.outputList = outputList;
     }
+
+    public void setSymbolTable(DictionaryInterface<String, Value> symbolTable) {
+        this.symbolTable = symbolTable;
+    }
 }
