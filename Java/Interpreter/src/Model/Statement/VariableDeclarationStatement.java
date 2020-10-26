@@ -10,7 +10,7 @@ import Model.Value.Value;
 public class VariableDeclarationStatement implements  Statement{
     Type type;
     String variableName;
-    public VariableDeclarationStatement(Type t, String id){ type = t; variableName = id; }
+    public VariableDeclarationStatement(String id, Type t){ type = t; variableName = id; }
 
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {

@@ -15,7 +15,7 @@ public class NumberValue implements Value{
         value = 0;
     }
 
-    int getValue(){
+    public int getValue(){
         return value;
     }
 

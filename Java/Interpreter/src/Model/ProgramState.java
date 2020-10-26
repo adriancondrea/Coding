@@ -9,7 +9,16 @@ public class ProgramState {
     StackInterface<Statement> executionStack;
     DictionaryInterface<String, Value> symbolTable;
     ListInterface<Value> outputList;
+    Statement originalProgram;
 
+    public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, Statement originalProgram) {
+        this.executionStack = executionStack;
+        this.symbolTable = symbolTable;
+        this.outputList = outputList;
+        this.originalProgram = originalProgram;
+        if(originalProgram != null)
+            executionStack.push(originalProgram);
+    }
     public StackInterface<Statement> getExecutionStack() {
         return executionStack;
     }
@@ -32,5 +41,15 @@ public class ProgramState {
 
     public void setSymbolTable(DictionaryInterface<String, Value> symbolTable) {
         this.symbolTable = symbolTable;
+    }
+
+    @Override
+    public String toString() {
+        return "\t\t~~Execution Stack~\n" +
+                executionStack.toString() +
+                "\n\t\t~~Symbol Table~~\n" +
+                symbolTable.toString() +
+                "\n\t\t~~Output List~~\n" +
+                outputList.toString();
     }
 }

@@ -3,8 +3,10 @@ package Model.Value;
 import Model.Type.BoolType;
 import Model.Type.Type;
 
-public class TrueValue implements Value{
-    public static boolean value;
+public class TrueValue extends BooleanValue implements Value{
+    public TrueValue(){
+        this.value = true;
+    }
 
     @Override
     public Type getType() {

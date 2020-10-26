@@ -26,8 +26,11 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     }
 
     @Override
-    public V lookup(K key) {
-        return map.get(key);
+    public V lookup(K key)throws CustomException {
+        V value = map.get(key);
+        if(value == null)
+            throw new CustomException("variable " + key.toString() + " is not defined!\n");
+        return value;
     }
 
     @Override
