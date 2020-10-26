@@ -5,6 +5,7 @@ import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.BoolType;
+import Model.Value.BooleanValue;
 import Model.Value.TrueValue;
 import Model.Value.Value;
 
@@ -25,7 +26,7 @@ public class ConditionalStatement implements Statement{
         if(!expressionValue.getType().equals(new BoolType()))
             throw new CustomException("Conditional expression is not a boolean!\n");
         else {
-            if (expressionValue.equals(new TrueValue()))
+            if (expressionValue.equals(new BooleanValue(true)))
                 executionStack.push(trueBranch);
             else
                 executionStack.push(falseBranch);

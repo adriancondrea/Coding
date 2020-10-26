@@ -20,4 +20,13 @@ public class BooleanValue implements Value{
     public String toString() {
         return value.toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof BooleanValue) {
+            BooleanValue val = (BooleanValue) obj;
+            return value == val.value;
+        }
+        return false;
+    }
 }
