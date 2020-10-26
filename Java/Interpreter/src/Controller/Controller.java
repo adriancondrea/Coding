@@ -6,6 +6,7 @@ import Model.AbstractDataTypes.MyList;
 import Model.AbstractDataTypes.MyStack;
 import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.ArithmeticExpression;
+import Model.Expression.LogicExpression;
 import Model.Expression.ValueExpression;
 import Model.Expression.VariableNameExpression;
 import Model.ProgramState;

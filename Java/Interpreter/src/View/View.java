@@ -19,7 +19,8 @@ public class View {
         System.out.println("ex3:");
         System.out.println("bool a;\nint v;\na=true;\n(If a Then v=2 Else v=3);\nPrint(v)\n");
 
-        System.out.println("ex4: testing");
+        System.out.println("ex4:");
+        System.out.println("int a;\na=5\n");
         System.out.println("command =");
         Scanner console = new Scanner(System.in);
         int choice = console.nextInt();
