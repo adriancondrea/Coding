@@ -32,6 +32,8 @@ public class MyList<T> implements ListInterface<T>{
                 listToString.append('\n');
             }
             }
+        if(listToString.toString().isEmpty())
+            return "EMPTY\n";
         //convert the stringBuilder to string and return it
         return  listToString.toString();
         }

@@ -49,6 +49,8 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
                 dictionaryToString.append('\n');
             }
         }
+        if(dictionaryToString.toString().isEmpty())
+            return "EMPTY\n";
         return dictionaryToString.toString();
         }
 }

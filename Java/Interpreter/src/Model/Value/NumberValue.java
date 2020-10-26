@@ -26,6 +26,6 @@ public class NumberValue implements Value{
 
     @Override
     public String toString() {
-        return "int";
+        return String.valueOf(value);
     }
 }

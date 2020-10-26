@@ -33,6 +33,8 @@ public class MyStack<T> implements StackInterface<T> {
 
     @Override
     public String toString() {
-        return stack.toString();
+        if(stack.isEmpty())
+            return "EMPTY\n";
+        return stack.toString() + '\n';
     }
 }

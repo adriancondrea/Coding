@@ -16,9 +16,7 @@ import Model.Value.BooleanValue;
 import Model.Value.NumberValue;
 import Model.Value.Value;
 import Repository.Repository;
-import com.sun.jdi.IntegerValue;
 
-import javax.swing.plaf.nimbus.State;
 
 public class Controller {
     Repository repository;
@@ -70,12 +68,16 @@ public class Controller {
                                             new ValueExpression(new NumberValue(2))), new AssignmentStatement("v",
                                                 new ValueExpression(new NumberValue(3)))), new PrintStatement(new VariableNameExpression("v"))))));
 
+        Statement ex4 = new CompoundStatement(new VariableDeclarationStatement("a", new IntegerType()), new AssignmentStatement("a", new ValueExpression(new NumberValue(5))));
+
         if(program == 1)
             stack.push(ex1);
         else if(program == 2)
             stack.push(ex2);
             else if(program == 3)
                 stack.push(ex3);
+            else if(program == 4)
+                stack.push(ex4);
 
         state = new ProgramState(stack, new MyDictionary<String, Value>(), new MyList<Value>(), null);
         repository.addState(state);

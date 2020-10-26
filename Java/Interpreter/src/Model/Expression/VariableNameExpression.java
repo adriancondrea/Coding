@@ -6,19 +6,18 @@ import Model.Value.Value;
 
 public class VariableNameExpression implements Expression{
     String variableName;
-    Value variableValue = null;
+
     public VariableNameExpression(String variableName){
         this.variableName = variableName;
     }
 
     @Override
     public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable) throws CustomException {
-        variableValue = symbolTable.lookup(variableName);
-        return variableValue;
+        return symbolTable.lookup(variableName);
     }
 
     @Override
     public String toString() {
-        return variableValue.toString();
+        return variableName;
     }
 }

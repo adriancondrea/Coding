@@ -4,7 +4,7 @@ import Model.Type.BoolType;
 import Model.Type.Type;
 
 public class BooleanValue implements Value{
-    boolean value;
+    Boolean value;
     public BooleanValue(boolean value){ this.value = value; }
     public BooleanValue() {this.value = true; }
     @Override
@@ -14,5 +14,10 @@ public class BooleanValue implements Value{
 
     public Boolean getValue() {
         return this.value;
+    }
+
+    @Override
+    public String toString() {
+        return value.toString();
     }
 }
