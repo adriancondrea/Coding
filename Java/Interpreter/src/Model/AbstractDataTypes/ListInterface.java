@@ -1,8 +1,8 @@
 package Model.AbstractDataTypes;
 
-import CustomException.CustomException;
+import CustomException.CollectionException;
 
 public interface ListInterface<T> {
-    void add(T element) throws CustomException;
-    T pop() throws CustomException;
+    void add(T element) throws CollectionException;
+    T pop() throws CollectionException;
 }

@@ -1,6 +1,7 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.StatementException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.Expression;
@@ -24,9 +25,9 @@ public class AssignmentStatement implements Statement{
             Value expressionValue = expression.evaluateExpression(symbolTable);
             if(expressionValue.getType().equals(symbolTable.lookup(id).getType()))
                 symbolTable.update(id, expressionValue);
-            else throw new CustomException("Type of expression and type of variable do not match!\n");
+            else throw new StatementException("Type of expression and type of variable do not match!\n");
         }
-        else throw new CustomException("Variable Id is not declared!\n");
+        else throw new StatementException("Variable Id is not declared!\n");
         currentState.setExecutionStack(executionStack);
         currentState.setSymbolTable(symbolTable);
         return currentState;

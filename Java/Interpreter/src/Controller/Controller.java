@@ -1,6 +1,6 @@
 package Controller;
 
-import CustomException.CustomException;
+import CustomException.*;
 import Model.AbstractDataTypes.MyDictionary;
 import Model.AbstractDataTypes.MyList;
 import Model.AbstractDataTypes.MyStack;
@@ -24,7 +24,7 @@ public class Controller {
 
     public void setDisplayState(Boolean displayState) { this.displayState = displayState; }
 
-    public ProgramState oneStepExecution(ProgramState state) throws CustomException{
+    public ProgramState oneStepExecution(ProgramState state) throws CustomException {
         StackInterface<Statement> executionStack = state.getExecutionStack();
         if(executionStack.isEmpty())
             throw new CustomException("Stack is empty!");
@@ -38,13 +38,9 @@ public class Controller {
             System.out.println(programState.toString());
         }
         while (!programState.getExecutionStack().isEmpty()){
-            try {
                 oneStepExecution(programState);
                 if(displayState)
                     System.out.println(programState.toString());
-            } catch (CustomException exception) {
-                throw new CustomException(exception.getMessage());
-            }
         }
     }
 
@@ -69,8 +65,13 @@ public class Controller {
 
         Statement ex4 = new CompoundStatement(new VariableDeclarationStatement("a", new IntegerType()), new AssignmentStatement("a", new ValueExpression(new NumberValue(5))));
 
+        Statement ex5 = new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()), new AssignmentStatement("a", new ValueExpression(new NumberValue(5))));
+
+        Statement ex6 = new CompoundStatement(
+                new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()), new AssignmentStatement("a", new ValueExpression(new BooleanValue(false)))),
+                new PrintStatement(new LogicExpression('&', new VariableNameExpression("a"), new ValueExpression(new BooleanValue(true)))));
         /*
-        Statement ex5 = new CompoundStatement(new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()),
+        Statement ex7 = new CompoundStatement(new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()),
                             new VariableDeclarationStatement("b", new BoolType())), new CompoundStatement(
                                 new CompoundStatement(new AssignmentStatement("a", new ValueExpression(new BooleanValue(true))),
                                         new AssignmentStatement("b", new ValueExpression(new BooleanValue(false))))),
@@ -86,6 +87,10 @@ public class Controller {
                 stack.push(ex3);
             else if(program == 4)
                 stack.push(ex4);
+            else if(program == 5)
+                stack.push(ex5);
+            else if(program == 6)
+                stack.push(ex6);
 
         state = new ProgramState(stack, new MyDictionary<String, Value>(), new MyList<Value>(), null);
         repository.addState(state);

@@ -1,6 +1,7 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.StatementException;
 import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
@@ -23,7 +24,7 @@ public class ConditionalStatement implements Statement{
         StackInterface<Statement> executionStack = currentState.getExecutionStack();
         Value expressionValue = condition.evaluateExpression(currentState.getSymbolTable());
         if(!expressionValue.getType().equals(new BoolType()))
-            throw new CustomException("Conditional expression is not a boolean!\n");
+            throw new StatementException("Conditional expression is not a boolean!\n");
         else {
             if (expressionValue.equals(new BooleanValue(true)))
                 executionStack.push(trueBranch);

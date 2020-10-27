@@ -1,8 +1,8 @@
 package View;
 
 import Controller.Controller;
-import CustomException.CustomException;
-import Repository.*;
+import Repository.Repository;
+import Repository.memoryRepository;
 
 import java.util.Scanner;
 
@@ -23,7 +23,10 @@ public class View {
         System.out.println("int a;\na=5\n");
 
         System.out.println("ex5:");
-        System.out.println("test\n");
+        System.out.println("Exception testing - assign an integer value to a bool variable\n");
+
+        System.out.println("ex6");
+        System.out.println("Logical operator testing\nbool a;\na = false;\nprint(a&true);\n");
 
         System.out.println("command =");
 
@@ -39,7 +42,7 @@ public class View {
         printMenu();
         try {
             controller.allStepExecution();
-        } catch (CustomException exception) {
+        } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }
     }

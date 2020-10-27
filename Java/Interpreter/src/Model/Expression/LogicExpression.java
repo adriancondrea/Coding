@@ -1,6 +1,8 @@
 package Model.Expression;
 
+import CustomException.CollectionException;
 import CustomException.CustomException;
+import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.Type.BoolType;
 import Model.Value.BooleanValue;
@@ -41,13 +43,13 @@ public class LogicExpression implements Expression{
                 else if(operation == 2)
                     return new BooleanValue(v1 | v2);
                 else if(operation == -1)
-                    throw new CustomException("Operation unknown!\n");
+                    throw new ExpressionException("Operation unknown!\n");
             }
             else
-                throw new CustomException("Operand2 is not a boolean!\n");
+                throw new ExpressionException("Operand2 is not a boolean!\n");
         }
         else
-            throw new CustomException("Operand1 is not a boolean!\n");
+            throw new ExpressionException("Operand1 is not a boolean!\n");
         return null;
     }
 

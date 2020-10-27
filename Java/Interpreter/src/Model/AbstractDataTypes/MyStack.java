@@ -1,6 +1,6 @@
 package Model.AbstractDataTypes;
 
-import CustomException.CustomException;
+import CustomException.CollectionException;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -14,9 +14,9 @@ public class MyStack<T> implements StackInterface<T> {
     }
 
     @Override
-    public T pop() throws CustomException {
+    public T pop() throws CollectionException {
         if(stack.isEmpty()){
-            throw new CustomException("Stack is empty!");
+            throw new CollectionException("Stack is empty!");
         }
         return stack.pop();
     }

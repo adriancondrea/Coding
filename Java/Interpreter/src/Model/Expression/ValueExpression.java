@@ -1,6 +1,7 @@
 package Model.Expression;
 
 import CustomException.CustomException;
+import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.Value.Value;
 

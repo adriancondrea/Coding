@@ -1,11 +1,12 @@
 package Model.Expression;
 
+import CustomException.CollectionException;
 import CustomException.CustomException;
+import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.Type.IntegerType;
 import Model.Value.NumberValue;
 import Model.Value.Value;
-import com.sun.jdi.IntegerValue;
 
 public class ArithmeticExpression implements Expression{
     Expression leftExpression, rightExpression;
@@ -57,7 +58,7 @@ public class ArithmeticExpression implements Expression{
                     return new NumberValue(leftNumber * rightNumber);
                 else if(operation == 2) {
                     if(rightNumber == 0)
-                        throw new CustomException("Division by zero!\n");
+                        throw new ExpressionException("Division by zero!\n");
                     return new NumberValue(leftNumber / rightNumber);
                 }
                 else if(operation == 3)
@@ -65,13 +66,13 @@ public class ArithmeticExpression implements Expression{
                 else if(operation == 4)
                     return new NumberValue(leftNumber - rightNumber);
                 else if(operation == -1)
-                    throw new CustomException("unknown operation!\n");
+                    throw new ExpressionException("unknown operation!\n");
             }
             else
-                throw new CustomException("Operand2 is not an integer!\n");
+                throw new ExpressionException("Operand2 is not an integer!\n");
         }
         else
-            throw new CustomException("Operand1 is not an integer!\n");
+            throw new ExpressionException("Operand1 is not an integer!\n");
         return null;
     }
 }

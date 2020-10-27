@@ -1,9 +1,9 @@
 package Model.AbstractDataTypes;
 
-import CustomException.CustomException;
+import CustomException.CollectionException;
 
 public interface StackInterface<T> {
-    T pop() throws CustomException;
+    T pop() throws CollectionException;
     void push(T element);
-    boolean isEmpty() throws CustomException;
+    boolean isEmpty() throws CollectionException;
 }

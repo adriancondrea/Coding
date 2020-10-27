@@ -1,35 +1,35 @@
 package Model.AbstractDataTypes;
 
-import CustomException.CustomException;
+import CustomException.CollectionException;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     Map<K, V> map;
-    //default constructor, initializez map as a HashMap
+    //default constructor, initializes map as a HashMap
     public MyDictionary() { map = new HashMap<>();
     }
 
     @Override
-    public void add(K key, V value) throws CustomException {
+    public void add(K key, V value) throws CollectionException {
         if(map.containsKey(key))
-            throw new CustomException("Element already exists!");
+            throw new CollectionException("Element already exists!");
         map.put(key, value);
     }
 
     @Override
-    public V update(K key, V value) throws CustomException {
+    public V update(K key, V value) throws CollectionException {
         if(!map.containsKey(key))
-            throw new CustomException("Key to which we want to update value doesn't exist!");
+            throw new CollectionException("Key to which we want to update value doesn't exist!");
         return map.put(key, value);
     }
 
     @Override
-    public V lookup(K key)throws CustomException {
+    public V lookup(K key)throws CollectionException {
         V value = map.get(key);
         if(value == null)
-            throw new CustomException("variable " + key.toString() + " is not defined!\n");
+            throw new CollectionException("variable " + key.toString() + " is not defined!\n");
         return value;
     }
 

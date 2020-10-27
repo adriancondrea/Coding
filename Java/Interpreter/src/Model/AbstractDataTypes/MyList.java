@@ -1,6 +1,6 @@
 package Model.AbstractDataTypes;
 
-import CustomException.CustomException;
+import CustomException.CollectionException;
 
 import java.util.LinkedList;
 
@@ -11,14 +11,14 @@ public class MyList<T> implements ListInterface<T>{
     public MyList() {list = new LinkedList<T>(); }
 
     @Override
-    public void add(T element) throws CustomException {
+    public void add(T element) throws CollectionException {
         list.add(element);
     }
 
     @Override
-    public T pop() throws CustomException {
+    public T pop() throws CollectionException {
         if(list.isEmpty())
-            throw new CustomException("list is empty!");
+            throw new CollectionException("list is empty!");
         return list.pop();
     }
 
