@@ -21,7 +21,12 @@ public class View {
 
         System.out.println("ex4:");
         System.out.println("int a;\na=5\n");
+
+        System.out.println("ex5:");
+        System.out.println("test\n");
+
         System.out.println("command =");
+
         Scanner console = new Scanner(System.in);
         int choice = console.nextInt();
         controller.newProgram(choice);

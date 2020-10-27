@@ -27,21 +27,24 @@ public class ProgramState {
         this.executionStack = stack;
     }
 
+
     public ListInterface<Value> getOutputList() {
         return this.outputList;
-    }
-
-    public DictionaryInterface<String, Value> getSymbolTable() {
-        return this.symbolTable;
     }
 
     public void setOutputList(ListInterface<Value> outputList) {
         this.outputList = outputList;
     }
 
+
+    public DictionaryInterface<String, Value> getSymbolTable() {
+        return this.symbolTable;
+    }
+
     public void setSymbolTable(DictionaryInterface<String, Value> symbolTable) {
         this.symbolTable = symbolTable;
     }
+
 
     @Override
     public String toString() {

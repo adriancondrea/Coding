@@ -15,6 +15,7 @@ public class ArithmeticExpression implements Expression{
         2 = /
         3 = +
         4 = -
+        -1 = invalid operation
      */
 
     public ArithmeticExpression(char operation, Expression leftExpression, Expression rightExpression){
@@ -28,10 +29,14 @@ public class ArithmeticExpression implements Expression{
             this.operation = 3;
         else if(operation =='-')
             this.operation = 4;
+        else
+            this.operation = -1;
     }
 
     @Override
     public String toString() {
+        if(operation == -1)
+            return leftExpression.toString() + " unknown operation " + rightExpression.toString();
         char[] operationsArray = {'n','*','/','+','-'};
         return leftExpression.toString() + ' ' + operationsArray[operation] + ' ' + rightExpression.toString();
     }
@@ -52,13 +57,15 @@ public class ArithmeticExpression implements Expression{
                     return new NumberValue(leftNumber * rightNumber);
                 else if(operation == 2) {
                     if(rightNumber == 0)
-                        throw new CustomException("Division by zero!");
+                        throw new CustomException("Division by zero!\n");
                     return new NumberValue(leftNumber / rightNumber);
                 }
                 else if(operation == 3)
                     return  new NumberValue(leftNumber + rightNumber);
                 else if(operation == 4)
                     return new NumberValue(leftNumber - rightNumber);
+                else if(operation == -1)
+                    throw new CustomException("unknown operation!\n");
             }
             else
                 throw new CustomException("Operand2 is not an integer!\n");

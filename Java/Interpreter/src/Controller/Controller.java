@@ -5,10 +5,7 @@ import Model.AbstractDataTypes.MyDictionary;
 import Model.AbstractDataTypes.MyList;
 import Model.AbstractDataTypes.MyStack;
 import Model.AbstractDataTypes.StackInterface;
-import Model.Expression.ArithmeticExpression;
-import Model.Expression.LogicExpression;
-import Model.Expression.ValueExpression;
-import Model.Expression.VariableNameExpression;
+import Model.Expression.*;
 import Model.ProgramState;
 import Model.Statement.*;
 import Model.Type.BoolType;
@@ -21,6 +18,7 @@ import Repository.Repository;
 
 public class Controller {
     Repository repository;
+    //if displayState flag is set to true, display the program state after each execution
     Boolean displayState;
     public Controller(Repository repository){ this.repository = repository; displayState = false; }
 
@@ -70,6 +68,15 @@ public class Controller {
                                                 new ValueExpression(new NumberValue(3)))), new PrintStatement(new VariableNameExpression("v"))))));
 
         Statement ex4 = new CompoundStatement(new VariableDeclarationStatement("a", new IntegerType()), new AssignmentStatement("a", new ValueExpression(new NumberValue(5))));
+
+        /*
+        Statement ex5 = new CompoundStatement(new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()),
+                            new VariableDeclarationStatement("b", new BoolType())), new CompoundStatement(
+                                new CompoundStatement(new AssignmentStatement("a", new ValueExpression(new BooleanValue(true))),
+                                        new AssignmentStatement("b", new ValueExpression(new BooleanValue(false))))),
+                        new CompoundStatement(new PrintStatement(new LogicExpression('&', new VariableNameExpression("a"), new VariableNameExpression("b"))),
+                                new PrintStatement(new LogicExpression('|', new VariableNameExpression("a"), new VariableNameExpression("b")))));
+        */
 
         if(program == 1)
             stack.push(ex1);

@@ -6,7 +6,6 @@ import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.BoolType;
 import Model.Value.BooleanValue;
-import Model.Value.TrueValue;
 import Model.Value.Value;
 
 public class ConditionalStatement implements Statement{

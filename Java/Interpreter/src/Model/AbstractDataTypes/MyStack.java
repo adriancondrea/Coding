@@ -35,6 +35,18 @@ public class MyStack<T> implements StackInterface<T> {
     public String toString() {
         if(stack.isEmpty())
             return "EMPTY\n";
-        return stack.toString() + '\n';
+
+        //return stack.toString() + '\n';
+        StringBuilder stackToString = new StringBuilder();
+        stackToString.append('{');
+        for(T element : stack){
+            if(element != null)
+                stackToString.append(element.toString());
+                stackToString.append('|');
+        }
+        //remove last |
+        stackToString.setLength(stackToString.length() -1);
+        stackToString.append("}\n");
+        return stackToString.toString();
     }
 }

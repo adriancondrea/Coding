@@ -6,7 +6,7 @@ import Model.Type.Type;
 public class BooleanValue implements Value{
     Boolean value;
     public BooleanValue(boolean value){ this.value = value; }
-    public BooleanValue() {this.value = true; }
+    public BooleanValue() {this.value = false; }
     @Override
     public Type getType() {
         return new BoolType();

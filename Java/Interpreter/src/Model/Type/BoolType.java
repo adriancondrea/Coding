@@ -1,9 +1,10 @@
 package Model.Type;
 
-import Model.Value.TrueValue;
+import Model.Value.BooleanValue;
 import Model.Value.Value;
 
 public class BoolType implements Type{
+    //check if an object is of type BoolType
     @Override
     public boolean equals(Object obj) {
         return obj instanceof BoolType;
@@ -16,6 +17,6 @@ public class BoolType implements Type{
 
     @Override
     public Value defaultValue() {
-        return new TrueValue();
+        return new BooleanValue();
     }
 }

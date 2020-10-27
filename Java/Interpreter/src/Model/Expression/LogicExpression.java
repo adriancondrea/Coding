@@ -40,6 +40,8 @@ public class LogicExpression implements Expression{
                     return new BooleanValue(v1 & v2);
                 else if(operation == 2)
                     return new BooleanValue(v1 | v2);
+                else if(operation == -1)
+                    throw new CustomException("Operation unknown!\n");
             }
             else
                 throw new CustomException("Operand2 is not a boolean!\n");
@@ -51,6 +53,8 @@ public class LogicExpression implements Expression{
 
     @Override
     public String toString() {
+        if(operation == -1)
+            return leftExpression.toString() + " unknown operation " + rightExpression.toString();
         char[] operationsArray = {'n', '&', '|'};
         return leftExpression.toString() + ' ' + operationsArray[operation] + ' ' + rightExpression.toString();
     }

@@ -16,6 +16,6 @@ public class NopStatement implements Statement{
 
     @Override
     public String toString() {
-        return "nop\n";
+        return "nop";
     }
 }

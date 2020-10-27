@@ -5,7 +5,6 @@ import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
-import Model.Type.Type;
 import Model.Value.Value;
 
 public class AssignmentStatement implements Statement{
