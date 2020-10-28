@@ -67,6 +67,15 @@ VALUES
     ('Intermediate', 'Wet - light standing water', null, null, 'Green'),
     ('Wet', 'Wet - heavy standing water', null, null, 'Blue')
 
+    INSERT Supplier(SupplierName, SuppliesSince)
+VALUES
+    ('Pirelli', 1950),
+    ('Bridgestone', 1976),
+    ('Continental', 1954),
+    ('Dunlop', 1951),
+    ('Goodyear', 1964),
+    ('Michelin', 1978)
+
 
     INSERT Car(CarNumber, DriverID, Cost, TireID, EngineID, CarName)
 VALUES
