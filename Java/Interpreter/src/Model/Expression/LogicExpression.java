@@ -1,6 +1,5 @@
 package Model.Expression;
 
-import CustomException.CollectionException;
 import CustomException.CustomException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
@@ -19,12 +18,12 @@ public class LogicExpression implements Expression{
     public LogicExpression(char operation, Expression leftExpression, Expression rightExpression){
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
-        if(operation == '&')
-            this.operation = 1;
-        else if(operation == '|')
-            this.operation = 2;
-        else
-            this.operation = -1;
+
+        switch (operation) {
+            case '&' -> this.operation = 1;
+            case '|' -> this.operation = 2;
+            default -> this.operation = -1;
+        }
     }
 
     @Override
@@ -38,19 +37,17 @@ public class LogicExpression implements Expression{
                 BooleanValue val2 = (BooleanValue) rightValue;
                 Boolean v1 = val1.getValue();
                 Boolean v2 = val2.getValue();
-                if(operation == 1)
-                    return new BooleanValue(v1 & v2);
-                else if(operation == 2)
-                    return new BooleanValue(v1 | v2);
-                else if(operation == -1)
-                    throw new ExpressionException("Operation unknown!\n");
+                return switch (operation) {
+                    case 1 -> new BooleanValue(v1 & v2);
+                    case 2 -> new BooleanValue(v1 | v2);
+                    default -> throw new ExpressionException("Operation unknown!\n");
+                };
             }
             else
                 throw new ExpressionException("Operand2 is not a boolean!\n");
         }
         else
             throw new ExpressionException("Operand1 is not a boolean!\n");
-        return null;
     }
 
     @Override

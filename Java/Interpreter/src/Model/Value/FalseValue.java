@@ -1,6 +1,6 @@
 package Model.Value;
 
-public class FalseValue extends BooleanValue implements Value{
+public class FalseValue extends BooleanValue{
     public FalseValue(){
         this.value = false;
     }

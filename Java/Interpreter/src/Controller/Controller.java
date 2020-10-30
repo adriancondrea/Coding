@@ -79,18 +79,14 @@ public class Controller {
                                 new PrintStatement(new LogicExpression('|', new VariableNameExpression("a"), new VariableNameExpression("b")))));
         */
 
-        if(program == 1)
-            stack.push(ex1);
-        else if(program == 2)
-            stack.push(ex2);
-            else if(program == 3)
-                stack.push(ex3);
-            else if(program == 4)
-                stack.push(ex4);
-            else if(program == 5)
-                stack.push(ex5);
-            else if(program == 6)
-                stack.push(ex6);
+        switch (program) {
+            case 1 -> stack.push(ex1);
+            case 2 -> stack.push(ex2);
+            case 3 -> stack.push(ex3);
+            case 4 -> stack.push(ex4);
+            case 5 -> stack.push(ex5);
+            case 6 -> stack.push(ex6);
+        }
 
         state = new ProgramState(stack, new MyDictionary<String, Value>(), new MyList<Value>(), null);
         repository.addState(state);

@@ -1,6 +1,5 @@
 package Model.Expression;
 
-import CustomException.CollectionException;
 import CustomException.CustomException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
@@ -22,16 +21,13 @@ public class ArithmeticExpression implements Expression{
     public ArithmeticExpression(char operation, Expression leftExpression, Expression rightExpression){
         this.leftExpression = leftExpression;
         this.rightExpression = rightExpression;
-        if(operation == '*')
-            this.operation = 1;
-        else if(operation == '/')
-            this.operation = 2;
-        else if(operation == '+')
-            this.operation = 3;
-        else if(operation =='-')
-            this.operation = 4;
-        else
-            this.operation = -1;
+        switch (operation) {
+            case '*' -> this.operation = 1;
+            case '/' -> this.operation = 2;
+            case '+' -> this.operation = 3;
+            case '-' -> this.operation = 4;
+            default -> this.operation = -1;
+        }
     }
 
     @Override
@@ -54,25 +50,25 @@ public class ArithmeticExpression implements Expression{
                 int leftNumber, rightNumber;
                 leftNumber =val1.getValue();
                 rightNumber = val2.getValue();
-                if(operation == 1)
-                    return new NumberValue(leftNumber * rightNumber);
-                else if(operation == 2) {
-                    if(rightNumber == 0)
-                        throw new ExpressionException("Division by zero!\n");
-                    return new NumberValue(leftNumber / rightNumber);
+                switch (operation) {
+                    case 1:
+                        return new NumberValue(leftNumber * rightNumber);
+                    case 2:
+                        if (rightNumber == 0)
+                            throw new ExpressionException("Division by zero!\n");
+                        return new NumberValue(leftNumber / rightNumber);
+                    case 3:
+                        return new NumberValue(leftNumber + rightNumber);
+                    case 4:
+                        return new NumberValue(leftNumber - rightNumber);
+                    default:
+                        throw new ExpressionException("unknown operation!\n");
                 }
-                else if(operation == 3)
-                    return  new NumberValue(leftNumber + rightNumber);
-                else if(operation == 4)
-                    return new NumberValue(leftNumber - rightNumber);
-                else if(operation == -1)
-                    throw new ExpressionException("unknown operation!\n");
             }
             else
                 throw new ExpressionException("Operand2 is not an integer!\n");
         }
         else
             throw new ExpressionException("Operand1 is not an integer!\n");
-        return null;
     }
 }
