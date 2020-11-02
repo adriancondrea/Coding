@@ -44,17 +44,18 @@ VALUES
     (18, 'Romain Grosjean', '1986-04-17', 'French', 7),
     (19, 'Nicholas Latifi', '1995-06-29', 'Canadian', 10),
     (20, 'George Russell', '1998-02-15', 'British', 10)
-    --(21, 'Carlos Sainz', '1994-09-1', 'Spanish', 15) --Invalid team, violates foreign key constraint, team with teamID 15 doesn't exist
+    --(21, 'Carlos Sainz', '1994-09-1', 'Spanish', 15) --!!Invalid team, violates foreign key constraint, team with teamID 15 doesn't exist
 
 
-    INSERT Engine(Manufacturer, Power, Capacity)
-    VALUES
-        ('Ferrari', 980, 1.6),
-        ('Honda', 960, 1.5),
-        ('Renault', 976, 1.58),
-        ('Mercedes', 1000, 1.6)
+INSERT Engine(Manufacturer, Power, Capacity)
+VALUES
+    ('Ferrari', 980, 1.6),
+    ('Honda', 960, 1.5),
+    ('Renault', 976, 1.58),
+    ('Mercedes', 1000, 1.6)
 
-    INSERT Tires(Compound, DrivingConditions, Grip, Durability, Color)
+
+INSERT Tires(Compound, DrivingConditions, Grip, Durability, Color)
 VALUES
     ('Hard', 'Dry', 5, 1, 'White'),
     ('Hard', 'Dry', 4, 2, 'White'),
@@ -67,7 +68,8 @@ VALUES
     ('Intermediate', 'Wet - light standing water', null, null, 'Green'),
     ('Wet', 'Wet - heavy standing water', null, null, 'Blue')
 
-    INSERT Supplier(SupplierName, SuppliesSince)
+
+INSERT Supplier(SupplierName, SuppliesSince)
 VALUES
     ('Pirelli', 1950),
     ('Bridgestone', 1976),
@@ -77,7 +79,7 @@ VALUES
     ('Michelin', 1978)
 
 
-    INSERT Car(CarNumber, DriverID, Cost, TireID, EngineID, CarName)
+INSERT Car(CarNumber, DriverID, Cost, TireID, EngineID, CarName)
 VALUES
     (1, 1, 12000000, 8, 4, 'Mercedes-AMG F1 W11 EQ Performance'),
     (2, 2, 12000000, 7, 4, 'Mercedes-AMG F1 W11 EQ Performance'),
@@ -101,96 +103,121 @@ VALUES
     (20, 20, 5000000, 2, 4, 'Williams FW43')
 
 
-INSERT Circuit(Type, Location, Length)
+INSERT Circuit(Location, Length, Type)
 VALUES
-    ('Race Circuit', 'Algarve International Circuit Portugal', 4.653),
-    ('Road Circuit', 'AVUS Germany', 8.300),
-    ('Race Circuit', 'Autodromo Internazionale Enzo e Dino Ferrari Italy', 4.909),
-    ('Street Circuit', 'Adelaide Street Circuit Australia', 3.780),
-    ('Race Circuit', 'Autodromo Nazionale Monza, Italy', 5.793),
-    ('Race Circuit', 'Bahrain International Circuit', 5.412),
-    ('Street Circuit', 'Marina Bay Street Circuit Singapore', 5.063),
-    ('Race Circuit', 'Circuit de Barcelona-Catalunya', 4.655),
-    ('Road Circuit', 'Circuit Bremgarten Switzerland', 7.208)
+    ('Algarve International Circuit Portugal', 4.653, 'Race Circuit'),
+    ('AVUS Germany', 8.300, 'Road Circuit'),
+    ('Autodromo Internazionale Enzo e Dino Ferrari Italy', 4.909, 'Race Circuit'),
+    ('Adelaide Street Circuit Australia', 3.780, 'Street Circuit'),
+    ('Autodromo Nazionale Monza, Italy', 5.793, 'Race Circuit'),
+    ('Bahrain International Circuit', 5.412, 'Race Circuit'),
+    ('Marina Bay Street Circuit Singapore', 5.063, 'Street Circuit'),
+    ('Circuit de Barcelona-Catalunya', 4.655, 'Race Circuit'),
+    ('Circuit Bremgarten Switzerland', 7.208, 'Road Circuit')
 
 
 INSERT Event(EventDate, CircuitID)
 VALUES
-    ('2020-08-07', 1),
-    ('2020-09-06', 1),
-    ('2021-04-03', 2),
-    (null, 1)
-    --('2021-09-12', 12) - invalid circuit id (non existent) - violates foreign key constraint
+    ('2020-01-04', 1),
+    ('2020-01-11', 2),
+    ('2020-01-18', 4),
+    ('2020-01-25', 3),
+    ('2020-02-01', 9),
+    ('2020-02-08', 6),
+    ('2020-02-15', 5),
+    ('2020-02-22', 7),
+    ('2020-03-07', 8),
+    ('2020-03-14', 1),
+    ('2020-04-18', 2),
+    ('2020-04-25', 4),
+    ('2020-05-09', 3),
+    ('2020-06-20', 9),
+    ('2020-07-25', 6),
+    ('2020-08-22', 5),
+    ('2020-09-26', 7),
+    ('2020-10-31', 8),
+    ('2020-11-21', 4),
+    ('2020-12-5', 7)
+    --('2021-09-12', 12) - !!!invalid circuit id (non existent) - violates foreign key constraint
 
 
-ALTER TABLE Tires
-ADD Compound varchar(50),
-    DrivingConditions varchar(50),
-    Grip smallint,
-    Durability smallint
-
-ALTER TABLE Car
-ADD CarName varchar(50)
-
-ALTER TABLE Tires
-ADD Color varchar(50)
-
-
-INSERT Sponsor(sponsorname, sponsorbudget)
+INSERT Sponsor(SponsorName, SponsorBudget)
 VALUES
-    ('Petronas', 50000000),
-    ('INEOS', 3000000),
-    ('Epson', 5000000),
-    ('Tommy Hilfiger', 10000000),
-    ('Pirelli', 20000000),
-    ('Puma', 5000000),
-    ('Ray Ban', 8000000),
-    ('Kaspersky', 1000000)
+    ('Nescafe Xpress', 0.08),
+    ('Hugo Boss', 2.35),
+    ('Vodafone' , 57.19),
+    ('Mobil 1', 26.51),
+    ('Pirelli', 200)
+
 
 INSERT Sponsor_Team(SponsorID, TeamID, SponsorshipValue)
 VALUES
-    (1, 2, 50000000),
-    (2, 2, 3000000),
-    (3, 2, 5000000),
-    (4, 2, 10000000),
-    (5, 2, 10000000),
-    (5, 1, 8000000),
-    (5, 3, 2000000),
-    (6, 1, 2000000),
-    (6, 2, 2000000),
-    (6, 3, 1000000),
-    (7, 1, 8000000),
-    (8, 1, 500000),
-    (8, 3, 500000)
+    (1, 8, 0.08),
+    (2, 8, 2.35),
+    (3, 8, 57.19),
+    (4, 8, 26.51),
+    (5, 1, 10),
+    (5, 2, 10),
+    (5, 3, 10),
+    (5, 4, 10),
+    (5, 5, 10),
+    (5, 6, 10),
+    (5, 7, 10),
+    (5, 8, 10),
+    (5, 9, 10),
+    (5,10, 10)
+
+
+INSERT Supplier_Tires(SupplierID, TireID)
+VALUES
+    (1,1),
+    (1,2),
+    (1,3),
+    (1,4),
+    (1,5),
+    (1,6),
+    (1,7),
+    (1,8),
+    (1,9),
+    (1,10),
+    (2,1),
+    (2,4),
+    (2,7),
+    (2,10),
+    (3,1),
+    (3,2),
+    (3,3),
+    (4,4),
+    (4,5),
+    (4,6),
+    (4,7),
+    (4,8),
+    (5,6),
+    (5,7),
+    (5,8),
+    (5,9),
+    (5,10),
+    (6,1),
+    (6,8),
+    (6,9)
+
 
 INSERT Team_Event(TeamID, EventID)
 VALUES
     (1, 1),
-    (2, 1),
-    (3, 1),
     (1, 2),
-    (2, 2)
-
-UPDATE Driver
-SET DateOfBirth = '1985-01-07'
-WHERE DriverName = 'Lewis Hamilton'
-
-UPDATE Driver
-SET Nationality = N'Monégasque'
-WHERE DriverName = 'Charles Leclerc'
-
-UPDATE Team
-SET FoundingYear = 2005
-WHERE TeamName = 'Red Bull Racing Honda'
-
-UPDATE Circuit
-SET Length = Length + 1
-WHERE Type = 'Race Circuit'
-
-DELETE
-from Event
-WHERE YEAR(EventDate) > 2020 AND MONTH(EventDate) >= 4
-
-DELETE
-from Event
-WHERE EventDate is NULL
+    (1, 3),
+    (1, 4),
+    (1, 5),
+    (1, 6),
+    (1, 7),
+    (1, 8),
+    (1, 9),
+    (1, 10),
+    (2, 1),
+    (2, 2),
+    (2, 3),
+    (2, 4),
+    (2, 5),
+    (2, 6),
+    (2, 7)

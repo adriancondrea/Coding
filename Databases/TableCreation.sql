@@ -1,7 +1,7 @@
 CREATE TABLE Sponsor
     (SponsorID INT PRIMARY KEY IDENTITY(1,1),
     SponsorName VARCHAR(50) NOT NULL,
-    SponsorBudget money)
+    SponsorBudget REAL)
 
 
 CREATE TABLE Team
@@ -14,7 +14,7 @@ CREATE TABLE Team
 CREATE TABLE Sponsor_Team
     (SponsorID INT FOREIGN KEY REFERENCES Sponsor(SponsorID),
     TeamID INT FOREIGN KEY REFERENCES Team(TeamID),
-    SponsorshipValue MONEY NOT NULL,
+    SponsorshipValue real,
     PRIMARY KEY (SponsorID, TeamID))
 
 
@@ -34,8 +34,11 @@ CREATE TABLE Supplier
 
 CREATE TABLE Tires
     (TireID INT PRIMARY KEY IDENTITY(1,1),
-    Compound VARCHAR(50),   --material tires are made of
-    Durability VARCHAR(50)) --soft, medium, hard
+    Compound varchar(50),
+    DrivingConditions varchar(50),
+    Grip smallint,
+    Durability smallint,
+    Color varchar(50))
 
 
 CREATE TABLE Supplier_Tires
@@ -58,14 +61,17 @@ CREATE TABLE Car
     constraint unique_driverID UNIQUE(DriverID),
     Cost money,
     TireID INT NOT NULL FOREIGN KEY REFERENCES Tires(TireID),
-    EngineID INT NOT NULL FOREIGN KEY REFERENCES Engine(EngineID))
+    EngineID INT NOT NULL FOREIGN KEY REFERENCES Engine(EngineID),
+    CarName varchar(50))
+
 
 
 CREATE TABLE Circuit
     (CircuitID INT PRIMARY KEY IDENTITY(1,1),
-    Type VARCHAR(50),   --street, road, race circuit
     Location VARCHAR(50) NOT NULL,
-    Length REAL)
+    Length REAL,
+    Type VARCHAR(50)   --street, road, race circuit
+    )
 
 
 CREATE TABLE Event

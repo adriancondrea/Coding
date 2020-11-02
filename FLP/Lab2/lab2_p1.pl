@@ -1,8 +1,9 @@
 %a. Insert an element on the position n in a list.
 
-%length(List, Length)
-%length(A: list, L: integer)
-%length(i, o)
+%myLen(List, Length)
+%myLen(A: list, L: integer)
+%myLen(i, o)
+%deterministic predicate
 myLen([], 0) :- !.		%length of an empty list is 0
 myLen([_|T], L) :-
 	myLen(T, L1),		%compute the length of the tail
@@ -12,6 +13,7 @@ myLen([_|T], L) :-
 %insertElement(L: list, P: integer, V: Element, R: list)
 %insertElement(List, Position, Value, ResultList)
 %insertElement(i, i, i, o)
+%deterministic predicate
 
 %invalid position, leave the list unaffected
 insertElement(L, P, _, L) :-

@@ -3,6 +3,7 @@
 %gcd(number1, number2, result)
 %gcd(A: integer, B: integer, Rez: integer)
 %gcd(i, i, o)
+%deterministic predicate
 gcd(0, B, B) :- !.		%if a is 0, gcd = b, then cut
 gcd(A, 0, A) :- !.		%if b = 0, gcd = a, then cut
 gcd(A, A, A) :- !.		%if a = b, gcd = a, then cut
@@ -20,6 +21,7 @@ gcd(A, B, Rez) :- 		%if b > a, compute gcd(a, b-a)
 %gcdList(List, Result)
 %gcdList(L: list, R: integer)
 %gcdList(i, o)
+%deterministic predicate
 gcdList([], -1) :-		%if the list is empty, return -1 as the result of gcd, then do a cut
 	write('Empty list! '),
 	!.
