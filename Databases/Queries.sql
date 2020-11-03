@@ -138,6 +138,7 @@ SELECT C.CarNumber, C.CarName, C.Cost, E.Manufacturer as EngineManufacturer, E.P
 FROM Car C FULL JOIN Engine E on C.EngineID = E.EngineID
 FULL JOIN Tires T on C.TireID = T.TireID
 
+
 --show the team name, sponsor name, location of the event and date of the event.
 -- this query joins two many to many relations
 --use left join
@@ -147,6 +148,16 @@ LEFT JOIN Event E on E.EventID = TE.EventID
 LEFT JOIN Circuit C on C.CircuitID = E.CircuitID
 LEFT JOIN Team T on ST.TeamID = T.TeamID
 LEFT JOIN Sponsor S on ST.SponsorID = S.SponsorID
+
+
+--show to team name, sponsor name, location of the event and date of the event
+--for the teams sponsored by pirelli or Mobil1, taking part in an event on circuit Bremgarten
+SELECT T.TeamName, S.SponsorName, C.location, E.eventdate
+FROM Sponsor_Team ST  JOIN Team_Event TE on ST.TeamID = TE.TeamID
+JOIN Event E on E.EventID = TE.EventID
+JOIN Circuit C on C.CircuitID = E.CircuitID AND C.Location LIKE '%Bremgarten%'
+JOIN Team T on ST.TeamID = T.TeamID
+JOIN Sponsor S on ST.SponsorID = S.SponsorID AND S.SponsorName in ('Pirelli', 'Mobil 1')
 
 
 --see tire ID and compound that are never used
