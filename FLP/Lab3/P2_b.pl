@@ -57,7 +57,7 @@ selectionSortSublists(l1,l2,...,ln) = {
 */
 selectionSortSublists([], []) :- !.
 selectionSortSublists([H | T1], [R1| T2]) :- \+ number(H), selectionSort(H, R1), selectionSortSublists(T1, T2), !. %this means that H is a sublist, so sort it.
-selectionSortSublists([H| T1], [H| T2]) :- selectionSortSublists(T1, T2), !.		%just copy the element in the new list and move to the next one
+selectionSortSublists([H| T1], [H| T2]) :- selectionSortSublists(T1, T2).		%just copy the element in the new list and move to the next one
 
 
 
