@@ -1,0 +1,1 @@
+n = input("input n >= 30: ");p = input("input p <= 0.05: ");values = 0:n;binomial_distribution = binopdf(values, n, p);poisson_distribution = poisspdf(values, n * p);hold on;plot(values, binomial_distribution, 'color', 'g');plot(values, poisson_distribution, 'color', 'r');

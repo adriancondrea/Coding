@@ -1,0 +1,1 @@
+m = input("m= ");s= input("s= ");#a)p1 = normcdf(0, m, s);p2 = 1 - p1;disp(p1);disp(p2);#b)p3 = normcdf(1, m, s) - normcdf(-1, m, s);p4 = 1 - p3;disp(p3);disp(p4);#c)a = input("a= ");c= norminv(a, m, s);disp(c);#d)b= input("b=");d = norminv(1-b, m, s);disp(d);

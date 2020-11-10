@@ -1,0 +1,1 @@
+n = input("n= ");#a)p1 = tcdf(0, n);p2 = 1 - p1;disp(p1);disp(p2);#b)p3 = tcdf(1,n) - tcdf(-1, n);p4 = 1 - p3;disp(p3);disp(p4);#c)a = input("a= ");c= tinv(a, n);disp(c);#d)b= input("b=");d = tinv(1-b, n);disp(d);

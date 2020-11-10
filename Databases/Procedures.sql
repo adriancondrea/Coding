@@ -25,3 +25,21 @@ VALUES
 GO;
 
 EXEC CreateCurrentVersionTable
+
+
+CREATE PROCEDURE Team_AddColumnPoints
+AS
+    ALTER TABLE Team
+    ADD Points smallint;
+GO
+
+EXEC Team_AddColumnPoints
+
+
+CREATE PROCEDURE Team_RemoveColumnPoints
+AS
+    ALTER TABLE Team
+    Drop COLUMN Points
+GO
+
+EXEC Team_RemoveColumnPoints

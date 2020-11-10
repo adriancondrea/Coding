@@ -1,0 +1,1 @@
+p = input("input p between 0.05 and 0.95: ");for n=1:10:1000    values = 1:n;    binomial_distribution = binopdf(values, n, p);    plot(values, binomial_distribution,'color','r');    pause(0.3);    endfor
