@@ -20,7 +20,6 @@ def create_client_socket(rs):
     return client_socket
 
 
-
 #------------------------------------
 def tcp_server_init(ip_address, port):
     #creates the RS socket for the server
@@ -59,7 +58,7 @@ def tcp_send_string(sock, string):
     sock.send(string.encode('ascii'))
 
 def tcp_recv_string(sock):
-    string = sock.rec (1024).decode('ascii')
+    string = sock.recv(1024).decode('ascii')
     print("Received {}".format(string))
     return string
 
@@ -105,5 +104,12 @@ def udp_send_array(sock, array, destination_address):
         sock.sendto(struct.pack('!i', array[i]), destination_address)
 
 
+def udp_broadcast_int(sock, number, port):
+    print('Broadcasting {}'.format(number))
+    sock.sendto(struct.pack('!i', number), ('<broadcast>', port))
 
+# Enable broadcasting mode
+socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
 
+# Enable port reusage so we will be able to run multiple clients and servers on single (host, port). 
+socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
