@@ -1,0 +1,188 @@
+		~~Execution Stack~
+(bool a;(int v;(a = true;((IF(a) THEN(v = 2)ELSE (v = 3));print(v)))))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+bool a
+(int v;(a = true;((IF(a) THEN(v = 2)ELSE (v = 3));print(v))))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+(int v;(a = true;((IF(a) THEN(v = 2)ELSE (v = 3));print(v))))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->false
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+int v
+(a = true;((IF(a) THEN(v = 2)ELSE (v = 3));print(v)))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->false
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+(a = true;((IF(a) THEN(v = 2)ELSE (v = 3));print(v)))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->false
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+a = true
+((IF(a) THEN(v = 2)ELSE (v = 3));print(v))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->false
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+((IF(a) THEN(v = 2)ELSE (v = 3));print(v))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->true
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+(IF(a) THEN(v = 2)ELSE (v = 3))
+print(v)
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->true
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+v = 2
+print(v)
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->true
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+print(v)
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->true
+v->2
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+EMPTY
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+
+		~~Execution Stack~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table~~
+a->true
+v->2
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List~~
+2
+
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+
+
+
+

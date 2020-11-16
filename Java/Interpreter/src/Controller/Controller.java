@@ -26,8 +26,9 @@ public class Controller {
         return currentStatement.execute(state);
     }
 
-    public void allStepExecution() throws CustomException {
+    public void allStepExecution(){
         ProgramState programState = repository.getCurrentProgram();
+        repository.logProgramStateExecution(programState);
         if(displayState){
             System.out.println(programState.toString());
         }
@@ -35,6 +36,7 @@ public class Controller {
                 oneStepExecution(programState);
                 if(displayState)
                     System.out.println(programState.toString());
+                repository.logProgramStateExecution(programState);
         }
     }
 
@@ -43,7 +45,7 @@ public class Controller {
         ProgramState state;
         StackInterface<Statement> stack = new MyStack<>();
         stack.push(program);
-        state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), null);
+        state = new ProgramState(stack, new MyDictionary<>(), new MyList<>(), new MyDictionary<>(),null);
         repository.addState(state);
     }
 }

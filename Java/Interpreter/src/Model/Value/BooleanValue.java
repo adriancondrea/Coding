@@ -24,8 +24,8 @@ public class BooleanValue implements Value{
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof BooleanValue) {
-            BooleanValue val = (BooleanValue) obj;
-            return value == val.value;
+            Boolean val = ((BooleanValue) obj).getValue();
+            return val == this.getValue();
         }
         return false;
     }

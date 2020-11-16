@@ -28,4 +28,13 @@ public class NumberValue implements Value{
     public String toString() {
         return String.valueOf(value);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof NumberValue){
+            int objValue = ((NumberValue) obj).getValue();
+            return objValue == this.getValue();
+        }
+        return false;
+    }
 }

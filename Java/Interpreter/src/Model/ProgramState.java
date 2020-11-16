@@ -2,19 +2,24 @@ package Model;
 
 import Model.AbstractDataTypes.*;
 import Model.Statement.Statement;
+import Model.Value.StringValue;
 import Model.Value.Value;
+
+import java.io.BufferedReader;
 
 public class ProgramState {
 
     StackInterface<Statement> executionStack;
     DictionaryInterface<String, Value> symbolTable;
     ListInterface<Value> outputList;
+    DictionaryInterface<StringValue, BufferedReader> fileTable;
     Statement originalProgram;
 
-    public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, Statement originalProgram) {
+    public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable ,Statement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputList = outputList;
+        this.fileTable = fileTable;
         this.originalProgram = originalProgram;
         if(originalProgram != null)
             executionStack.push(originalProgram);
@@ -45,6 +50,13 @@ public class ProgramState {
         this.symbolTable = symbolTable;
     }
 
+    public DictionaryInterface<StringValue, BufferedReader> getFileTable() {
+        return fileTable;
+    }
+
+    public void setFileTable(DictionaryInterface<StringValue, BufferedReader> fileTable) {
+        this.fileTable = fileTable;
+    }
 
     @Override
     public String toString() {
@@ -56,6 +68,8 @@ public class ProgramState {
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
                 "\n\t\t~~Output List~~\n" +
                 outputList.toString()+
+                "\n\t\t~~File Table~~\n"+
+                fileTable.toString()+
                 "~~~~~~~~~~END OF STATE~~~~~~~~~~\n\n\n\n";
     }
 }
