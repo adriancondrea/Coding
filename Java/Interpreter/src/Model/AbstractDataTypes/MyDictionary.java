@@ -39,6 +39,11 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     }
 
     @Override
+    public V remove(K key) {
+        return map.remove(key);
+    }
+
+    @Override
     public String toString() {
         StringBuilder dictionaryToString = new StringBuilder();
         for(K key: map.keySet()) {

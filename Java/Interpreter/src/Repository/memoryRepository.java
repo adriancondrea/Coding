@@ -22,6 +22,12 @@ public class memoryRepository implements Repository{
         this.logFilePath = logFilePath;
     }
 
+    public memoryRepository(ProgramState programState, String logFilePath){
+        this.programStates = new LinkedList<ProgramState>();
+        programStates.add(programState);
+        this.logFilePath = logFilePath;
+    }
+
     @Override
     public void addState(ProgramState newState) {
         programStates.addLast(newState);

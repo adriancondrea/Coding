@@ -1,5 +1,6 @@
 package Model.Value;
 
+import Model.Type.StringType;
 import Model.Type.Type;
 
 public class StringValue implements Value{
@@ -24,7 +25,7 @@ public class StringValue implements Value{
 
     @Override
     public Type getType() {
-        return null;
+        return new StringType();
     }
 
     @Override

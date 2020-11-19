@@ -1,13 +1,72 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.FileException;
+import CustomException.ExpressionException;
+import CustomException.StatementException;
+import Model.AbstractDataTypes.DictionaryInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
+import Model.Type.IntegerType;
+import Model.Type.StringType;
+import Model.Value.NumberValue;
+import Model.Value.StringValue;
+import Model.Value.Value;
+
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public class readFile implements Statement{
     Expression expression;
+    String variableName;
+
+    public readFile(Expression expression, String variableName){
+        this.expression = expression;
+        this.variableName = variableName;
+    }
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {
-        return null;
+        DictionaryInterface<String, Value> symbolTable = currentState.getSymbolTable();
+        DictionaryInterface<StringValue, BufferedReader> fileTable = currentState.getFileTable();
+        if(symbolTable.isDefined(variableName)){
+            Value value = symbolTable.lookup(variableName);
+            if(value.getType().equals(new IntegerType())){
+                Value expressionValue = expression.evaluateExpression(symbolTable);
+                if(expressionValue.getType().equals(new StringType())){
+                    StringValue stringValue = (StringValue) expressionValue;
+                    BufferedReader reader = fileTable.lookup(stringValue);
+                    try{
+                        String line = reader.readLine();
+                        NumberValue variableValue;
+                        if(line == null){
+                            variableValue = new NumberValue();
+                        }
+                        else{
+                            variableValue = new NumberValue(Integer.parseInt(line));
+                        }
+                        symbolTable.update(variableName, variableValue);
+                    } catch (IOException e) {
+                        throw new FileException("Error reading from file!");
+                    }
+                }
+                else{
+                    throw new ExpressionException("Expression not of type string!");
+                }
+            }
+            else{
+                throw new StatementException("Value type is not int!");
+            }
+        }
+        else{
+            throw new StatementException("Variable name not defined!");
+        }
+        currentState.setSymbolTable(symbolTable);
+        currentState.setFileTable(fileTable);
+        return currentState;
+    }
+
+    @Override
+    public String toString() {
+        return "readFile(" + expression.toString() + ", " + variableName.toString() +")";
     }
 }
