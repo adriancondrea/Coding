@@ -1,4 +1,5 @@
 package Tests;
+import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.MyDictionary;
 import Model.Expression.*;
@@ -6,6 +7,35 @@ import Model.Value.*;
 import org.junit.Test;
 public class TestExpression {
 
+    @Test
+    public void testLess(){
+        DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
+        Expression expression = new RelationalExpression("<", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
+        Value val = expression.evaluateExpression(dictionary);
+        Boolean answer = ((BooleanValue)val).getValue();
+        assert(answer);
+    }
+
+    @Test
+    public void testGreater(){
+        DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
+        Expression expression = new RelationalExpression(">", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
+        Value val = expression.evaluateExpression(dictionary);
+        Boolean answer = ((BooleanValue)val).getValue();
+        assert(!answer);
+    }
+
+    @Test
+    public void testUnknownRelation(){
+        DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
+        Expression expression = new RelationalExpression("??", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
+        try {
+            Value val = expression.evaluateExpression(dictionary);
+            assert(false);
+        }catch (ExpressionException e){
+            assert(e.getMessage().equals("unknown comparison relation!"));
+        }
+    }
     @Test
     public void testAddition(){
         DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
