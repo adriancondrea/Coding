@@ -353,4 +353,7 @@ CREATE PROCEDURE Reset_Version AS
     GO;
 
 EXEC Reset_Version
-EXEC BringDatabaseToVersion 5
+EXEC BringDatabaseToVersion 2
+
+SELECT *
+FROM TEAM
