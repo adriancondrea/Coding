@@ -1,0 +1,342 @@
+Started logging!
+
+		~~Execution Stack~
+((((((((string varf;varf = test.in);Open Read File 'varf');int varc);readFile(varf, varc));print(varc));readFile(varf, varc));print(varc));closeRFile(varf))
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+(((((((string varf;varf = test.in);Open Read File 'varf');int varc);readFile(varf, varc));print(varc));readFile(varf, varc));print(varc))
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+((((((string varf;varf = test.in);Open Read File 'varf');int varc);readFile(varf, varc));print(varc));readFile(varf, varc))
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+(((((string varf;varf = test.in);Open Read File 'varf');int varc);readFile(varf, varc));print(varc))
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+((((string varf;varf = test.in);Open Read File 'varf');int varc);readFile(varf, varc))
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+(((string varf;varf = test.in);Open Read File 'varf');int varc)
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+((string varf;varf = test.in);Open Read File 'varf')
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+(string varf;varf = test.in)
+Open Read File 'varf'
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+string varf
+varf = test.in
+Open Read File 'varf'
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+varf = test.in
+Open Read File 'varf'
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+Open Read File 'varf'
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+int varc
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+readFile(varf, varc)
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->0
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+print(varc)
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->15
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+EMPTY
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+readFile(varf, varc)
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->15
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+15
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+print(varc)
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->50
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+15
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+closeRFile(varf)
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->50
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+15
+50
+		~~File Table~~
+test.in
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Started logging!
+
+		~~Execution Stack~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Symbol Table~~
+varf->test.in
+varc->50
+~~~~~~~~~~~~~~~~~~~~~~~~		~~Output List~~
+15
+50
+		~~File Table~~
+EMPTY
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
