@@ -20,25 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6179f3ff-faab-4354-a708-a17ddf4fb068" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/AbstractDataTypes/DictionaryInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/AbstractDataTypes/DictionaryInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/AbstractDataTypes/MyDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/AbstractDataTypes/MyDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/ProgramState.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Model/ProgramState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Repository/memoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/out/production/Interpreter/Repository/memoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/DictionaryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/DictionaryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/MyDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/MyDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/AbstractDataTypes/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/Expression/RelationalExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/Expression/RelationalExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/ProgramState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/Statement/readFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/Statement/readFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Model/Value/StringValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Model/Value/StringValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Interpreter/src/Repository/memoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Interpreter/src/Repository/memoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Problems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +58,41 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Functional Programming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,7 +103,8 @@
       <option name="presentableId" value="Default" />
       <updated>1606128003033</updated>
       <workItem from="1606128004304" duration="171000" />
-      <workItem from="1606128191021" duration="327000" />
+      <workItem from="1606128191021" duration="1547000" />
+      <workItem from="1606138005720" duration="5338000" />
     </task>
     <servers />
   </component>
@@ -108,9 +124,49 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="461" y="1122" key="#Project_Structure" timestamp="1606128051929">
+    <state x="461" y="1122" key="#Project_Structure" timestamp="1606138703774">
       <screen x="253" y="1080" width="1440" height="900" />
     </state>
-    <state x="461" y="1122" key="#Project_Structure/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606128051929" />
+    <state x="461" y="1122" key="#Project_Structure/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606138703774" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1606158867873">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606158867873" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606156235658" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1606158867871">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.center/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606158867871" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606156235657" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1606158867868">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.left/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606158867868" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606156235655" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1606158867872">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="245" key="GridCell.Tab.0.right/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606158867872" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606156235658" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom" timestamp="1606132819637">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606132162679" />
+    <state width="1398" height="304" key="GridCell.Tab.1.bottom/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606132819637" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center" timestamp="1606132819635">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.center/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606132162677" />
+    <state width="1398" height="304" key="GridCell.Tab.1.center/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606132819635" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left" timestamp="1606132819634">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.left/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606132162677" />
+    <state width="1398" height="304" key="GridCell.Tab.1.left/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606132819634" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right" timestamp="1606132819636">
+      <screen x="253" y="1080" width="1440" height="900" />
+    </state>
+    <state width="1398" height="304" key="GridCell.Tab.1.right/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606132162678" />
+    <state width="1398" height="304" key="GridCell.Tab.1.right/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1606132819636" />
   </component>
 </project>
