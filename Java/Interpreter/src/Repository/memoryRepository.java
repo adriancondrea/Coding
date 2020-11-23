@@ -14,16 +14,16 @@ public class memoryRepository implements Repository{
     String logFilePath = "log.txt";
 
     public memoryRepository(){
-        programStates = new LinkedList<ProgramState>();
+        programStates = new LinkedList<>();
     }
 
     public memoryRepository(String logFilePath){
-        programStates = new LinkedList<ProgramState>();
+        programStates = new LinkedList<>();
         this.logFilePath = logFilePath;
     }
 
     public memoryRepository(ProgramState programState, String logFilePath){
-        this.programStates = new LinkedList<ProgramState>();
+        this.programStates = new LinkedList<>();
         programStates.add(programState);
         this.logFilePath = logFilePath;
     }
@@ -48,7 +48,9 @@ public class memoryRepository implements Repository{
         } catch (IOException e) {
             throw new RepositoryException("Log program state execution failed!");
         }
+        logFile.println("Started logging!\n");
         logFile.println(programState);
+        logFile.println("Log ended!\n\n\n");
         logFile.close();
     }
 }

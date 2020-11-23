@@ -7,5 +7,6 @@ public interface DictionaryInterface<K, V> {
     V update(K key, V value) throws CollectionException;
     V lookup(K key) throws CollectionException;
     boolean isDefined(K key);
+    String KeysToString();
     V remove(K key);
 }

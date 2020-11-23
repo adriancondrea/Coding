@@ -1,13 +1,12 @@
 package Model.Expression;
 
 import CustomException.CustomException;
+import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
-import Model.Type.BoolType;
 import Model.Type.IntegerType;
 import Model.Value.BooleanValue;
 import Model.Value.NumberValue;
 import Model.Value.Value;
-import CustomException.ExpressionException;
 
 public class RelationalExpression implements Expression{
     Expression leftExpression, rightExpression;

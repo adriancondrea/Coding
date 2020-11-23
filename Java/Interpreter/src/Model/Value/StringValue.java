@@ -32,7 +32,7 @@ public class StringValue implements Value{
     public boolean equals(Object obj) {
         if(obj instanceof StringValue){
             String value = ((StringValue) obj).getValue();
-            return value == this.getValue();
+            return value.equals(this.getValue());
         }
         return false;
     }

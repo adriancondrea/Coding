@@ -63,13 +63,13 @@ public class ProgramState {
         return "\t\t~~Execution Stack~\n" +
                 executionStack.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~Symbol Table~~\n" +
+                "\t\t~~Symbol Table~~\n" +
                 symbolTable.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~Output List~~\n" +
+                "\t\t~~Output List~~\n" +
                 outputList.toString()+
-                "\n\t\t~~File Table~~\n"+
-                fileTable.toString()+
-                "~~~~~~~~~~END OF STATE~~~~~~~~~~\n\n\n\n";
+                "\t\t~~File Table~~\n"+
+                fileTable.KeysToString()+
+                "~~~~~~~~~~END OF STATE~~~~~~~~~~";
     }
 }

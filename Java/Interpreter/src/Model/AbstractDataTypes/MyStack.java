@@ -10,7 +10,7 @@ public class MyStack<T> implements StackInterface<T> {
 
     //default constructor
     public MyStack(){
-        this.stack = new ArrayDeque<T>();
+        this.stack = new ArrayDeque<>();
     }
 
     @Override

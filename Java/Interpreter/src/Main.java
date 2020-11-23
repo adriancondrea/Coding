@@ -64,7 +64,7 @@ public class Main {
                 new CompoundStatement(new VariableDeclarationStatement("a", new BoolType()), new AssignmentStatement("a", new ValueExpression(new BooleanValue(false)))),
                 new PrintStatement(new LogicExpression('&', new VariableNameExpression("a"), new ValueExpression(new BooleanValue(true)))));
         ProgramState program6 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(),ex6);
-        Repository repository6 = new memoryRepository(program2, "log6.txt");
+        Repository repository6 = new memoryRepository(program6, "log6.txt");
         Controller controller6 = new Controller(repository6);
 
         Statement ex7 = new CompoundStatement(new CompoundStatement(new CompoundStatement(new CompoundStatement(new CompoundStatement(new CompoundStatement(new CompoundStatement(

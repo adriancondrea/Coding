@@ -67,6 +67,6 @@ public class readFile implements Statement{
 
     @Override
     public String toString() {
-        return "readFile(" + expression.toString() + ", " + variableName.toString() +")";
+        return "readFile(" + expression.toString() + ", " + variableName +")";
     }
 }
