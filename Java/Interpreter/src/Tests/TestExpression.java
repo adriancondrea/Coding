@@ -2,6 +2,7 @@ package Tests;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.MyDictionary;
+import Model.AbstractDataTypes.MyHeap;
 import Model.Expression.*;
 import Model.Value.*;
 import org.junit.Test;
@@ -11,7 +12,7 @@ public class TestExpression {
     public void testLess(){
         DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
         Expression expression = new RelationalExpression("<", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
-        Value val = expression.evaluateExpression(dictionary);
+        Value val = expression.evaluateExpression(dictionary, new MyHeap<>());
         Boolean answer = ((BooleanValue)val).getValue();
         assert(answer);
     }
@@ -20,7 +21,7 @@ public class TestExpression {
     public void testGreater(){
         DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
         Expression expression = new RelationalExpression(">", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
-        Value val = expression.evaluateExpression(dictionary);
+        Value val = expression.evaluateExpression(dictionary, new MyHeap<>());
         Boolean answer = ((BooleanValue)val).getValue();
         assert(!answer);
     }
@@ -30,10 +31,12 @@ public class TestExpression {
         DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
         Expression expression = new RelationalExpression("??", new ValueExpression(new NumberValue(5)), new ValueExpression(new NumberValue(8)));
         try {
-            Value val = expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert(false);
         }catch (ExpressionException e){
             assert(e.getMessage().equals("unknown comparison relation!"));
+        } catch (CustomException.CustomException e) {
+            e.printStackTrace();
         }
     }
     @Test
@@ -42,7 +45,7 @@ public class TestExpression {
         Expression expression=new ArithmeticExpression('+',new ValueExpression(new NumberValue(2)),new ValueExpression(new NumberValue(3)));
         try
         {
-            Value val=expression.evaluateExpression(dictionary);
+            Value val=expression.evaluateExpression(dictionary, new MyHeap<>());
             int answer=((NumberValue)val).getValue();
             assert(answer==5);
         }catch (Exception ignored){}
@@ -54,7 +57,7 @@ public class TestExpression {
         Expression expression=new ArithmeticExpression('+',new ValueExpression(new NumberValue(2)),new ValueExpression(new BooleanValue(true)));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert(false);
         }catch (Exception e){ assert(e.getMessage().equals("Operand2 is not an integer!\n")); }
     }
@@ -65,7 +68,7 @@ public class TestExpression {
         Expression expression=new ArithmeticExpression('u',new ValueExpression(new NumberValue(2)),new ValueExpression(new NumberValue(3)));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert(false);
         }catch (Exception e){ assert(e.getMessage().equals("unknown operation!\n")); }
     }
@@ -75,9 +78,9 @@ public class TestExpression {
         DictionaryInterface<String, Value> dictionary=new MyDictionary<>();
         Expression expression=new ArithmeticExpression('/',new ValueExpression(new NumberValue(2)),new ValueExpression(new NumberValue(0)));
         try {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
         }catch (Exception e) {assert(e.getMessage().equals("Division by zero!\n"));}
-        }
+    }
 
     @Test
     public void testAdditionBadLeftOperand(){
@@ -85,7 +88,7 @@ public class TestExpression {
         Expression expression=new ArithmeticExpression('+',new ValueExpression(new TrueValue()),new ValueExpression(new NumberValue(3)));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert(false);
         }catch (Exception e){ assert(e.getMessage().equals("Operand1 is not an integer!\n")); }
     }
@@ -96,7 +99,7 @@ public class TestExpression {
         Expression expression = new LogicExpression('&', new ValueExpression(new TrueValue()), new ValueExpression(new FalseValue()));
         try
         {
-            Value val = expression.evaluateExpression(dictionary);
+            Value val = expression.evaluateExpression(dictionary, new MyHeap<>());
             assert !((BooleanValue) val).getValue();
         }catch (Exception e) { assert false; }
     }
@@ -107,7 +110,7 @@ public class TestExpression {
         Expression expression = new LogicExpression('&', new ValueExpression(new NumberValue(4)), new ValueExpression(new FalseValue()));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert (false);
         }catch (Exception e) { assert e.getMessage().equals("Operand1 is not a boolean!\n"); }
     }
@@ -118,7 +121,7 @@ public class TestExpression {
         Expression expression = new LogicExpression('&', new ValueExpression(new BooleanValue(true)), new ValueExpression(new NumberValue(5)));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert (false);
         }catch (Exception e) { assert e.getMessage().equals("Operand2 is not a boolean!\n"); }
     }
@@ -129,7 +132,7 @@ public class TestExpression {
         Expression expression = new LogicExpression('u', new ValueExpression(new BooleanValue(true)), new ValueExpression(new TrueValue()));
         try
         {
-            expression.evaluateExpression(dictionary);
+            expression.evaluateExpression(dictionary, new MyHeap<>());
             assert (false);
         }catch (Exception e) { assert e.getMessage().equals("Operation unknown!\n"); }
     }
@@ -138,7 +141,7 @@ public class TestExpression {
     public void testValueExpression(){
         DictionaryInterface<String, Value> dictionary = new MyDictionary<>();
         Expression expression = new ValueExpression(new NumberValue(42));
-        Value val = expression.evaluateExpression(dictionary);
+        Value val = expression.evaluateExpression(dictionary, new MyHeap<>());
         assert (((NumberValue) val).getValue() == 42);
     }
 
@@ -147,7 +150,7 @@ public class TestExpression {
         DictionaryInterface<String, Value> dictionary = new MyDictionary<>();
         dictionary.add("testVar", new NumberValue(42));
         Expression expression = new VariableNameExpression("testVar");
-        Value val = expression.evaluateExpression(dictionary);
+        Value val = expression.evaluateExpression(dictionary, new MyHeap<>());
         assert (((NumberValue) val).getValue() == 42);
     }
 }

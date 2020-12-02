@@ -13,13 +13,15 @@ public class ProgramState {
     DictionaryInterface<String, Value> symbolTable;
     ListInterface<Value> outputList;
     DictionaryInterface<StringValue, BufferedReader> fileTable;
+    HeapInterface<Value> heapTable;
     Statement originalProgram;
 
-    public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable ,Statement originalProgram) {
+    public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable, HeapInterface<Value> heapTable, Statement originalProgram) {
         this.executionStack = executionStack;
         this.symbolTable = symbolTable;
         this.outputList = outputList;
         this.fileTable = fileTable;
+        this.heapTable = heapTable;
         this.originalProgram = originalProgram;
         if(originalProgram != null)
             executionStack.push(originalProgram);
@@ -58,18 +60,30 @@ public class ProgramState {
         this.fileTable = fileTable;
     }
 
+    public HeapInterface<Value> getHeapTable() {
+        return heapTable;
+    }
+
+    public void setHeapTable(HeapInterface<Value> heapTable) {
+        this.heapTable = heapTable;
+    }
+
     @Override
     public String toString() {
         return "\t\t~~Execution Stack~\n" +
                 executionStack.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\t\t~~Symbol Table~~\n" +
+                "\n\t\t~~Symbol Table~~\n" +
                 symbolTable.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\t\t~~Output List~~\n" +
+                "\n\t\t~~Output List~~\n" +
                 outputList.toString()+
-                "\t\t~~File Table~~\n"+
+                "~~~~~~~~~~~~~~~~~~~~~~~~"+
+                "\n\t\t~~File Table~~\n"+
                 fileTable.KeysToString()+
+                "~~~~~~~~~~~~~~~~~~~~~~~~"+
+                "\n\t\t~~Heap Table~~\n"+
+                heapTable.toString()+
                 "~~~~~~~~~~END OF STATE~~~~~~~~~~";
     }
 }

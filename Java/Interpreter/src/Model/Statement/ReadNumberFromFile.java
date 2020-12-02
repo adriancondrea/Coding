@@ -16,11 +16,11 @@ import Model.Value.Value;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class readFile implements Statement{
+public class ReadNumberFromFile implements Statement{
     Expression expression;
     String variableName;
 
-    public readFile(Expression expression, String variableName){
+    public ReadNumberFromFile(Expression expression, String variableName){
         this.expression = expression;
         this.variableName = variableName;
     }
@@ -31,7 +31,7 @@ public class readFile implements Statement{
         if(symbolTable.isDefined(variableName)){
             Value value = symbolTable.lookup(variableName);
             if(value.getType().equals(new IntegerType())){
-                Value expressionValue = expression.evaluateExpression(symbolTable);
+                Value expressionValue = expression.evaluateExpression(symbolTable, currentState.getHeapTable());
                 if(expressionValue.getType().equals(new StringType())){
                     StringValue stringValue = (StringValue) expressionValue;
                     BufferedReader reader = fileTable.lookup(stringValue);

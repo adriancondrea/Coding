@@ -24,6 +24,7 @@ public class CompoundStatement implements Statement{
     @Override
     public String toString(){
         //return the compound statement in the form (first;second)
-        return "("+first.toString()+";"+second.toString()+")";
+        //return "("+first.toString()+";"+second.toString()+")";
+        return first.toString() + "; " + second.toString();
     }
 }

@@ -7,6 +7,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedList;
 
 public class memoryRepository implements Repository{
@@ -48,7 +50,9 @@ public class memoryRepository implements Repository{
         } catch (IOException e) {
             throw new RepositoryException("Log program state execution failed!");
         }
-        logFile.println("Started logging!\n");
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        logFile.println("Log date: " + formatter.format(date) + "\n");
         logFile.println(programState);
         logFile.println("Log ended!\n\n\n");
         logFile.close();

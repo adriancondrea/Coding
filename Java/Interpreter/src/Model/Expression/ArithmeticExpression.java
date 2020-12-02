@@ -3,6 +3,7 @@ package Model.Expression;
 import CustomException.CustomException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
+import Model.AbstractDataTypes.HeapInterface;
 import Model.Type.IntegerType;
 import Model.Value.NumberValue;
 import Model.Value.Value;
@@ -39,11 +40,11 @@ public class ArithmeticExpression implements Expression{
     }
 
     @Override
-    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable) throws CustomException {
+    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable, HeapInterface<Value> heapTable) {
         Value leftValue, rightValue;
-        leftValue = leftExpression.evaluateExpression(symbolTable);
+        leftValue = leftExpression.evaluateExpression(symbolTable, heapTable);
         if(leftValue.getType().equals(new IntegerType())){
-            rightValue = rightExpression.evaluateExpression(symbolTable);
+            rightValue = rightExpression.evaluateExpression(symbolTable, heapTable);
             if(rightValue.getType().equals(new IntegerType())){
                 NumberValue val1 = (NumberValue) leftValue;
                 NumberValue val2 = (NumberValue) rightValue;

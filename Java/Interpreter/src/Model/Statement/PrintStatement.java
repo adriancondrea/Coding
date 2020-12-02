@@ -16,7 +16,7 @@ public class PrintStatement implements Statement{
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {
         ListInterface<Value> outputList = currentState.getOutputList();
-        outputList.add(expression.evaluateExpression(currentState.getSymbolTable()));
+        outputList.add(expression.evaluateExpression(currentState.getSymbolTable(), currentState.getHeapTable()));
         currentState.setOutputList(outputList);
         return currentState;
     }

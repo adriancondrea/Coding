@@ -58,6 +58,11 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     }
 
     @Override
+    public Map<K, V> getContent() {
+        return (Map<K, V>) map;
+    }
+
+    @Override
     public String toString() {
         StringBuilder dictionaryToString = new StringBuilder();
         for(K key: map.keySet()) {

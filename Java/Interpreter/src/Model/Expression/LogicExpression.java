@@ -3,6 +3,7 @@ package Model.Expression;
 import CustomException.CustomException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
+import Model.AbstractDataTypes.HeapInterface;
 import Model.Type.BoolType;
 import Model.Value.BooleanValue;
 import Model.Value.Value;
@@ -27,11 +28,11 @@ public class LogicExpression implements Expression{
     }
 
     @Override
-    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable) throws CustomException {
+    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable, HeapInterface<Value> heapTable){
         Value leftValue, rightValue;
-        leftValue = leftExpression.evaluateExpression(symbolTable);
+        leftValue = leftExpression.evaluateExpression(symbolTable, heapTable);
         if(leftValue.getType().equals(new BoolType())){
-            rightValue = rightExpression.evaluateExpression(symbolTable);
+            rightValue = rightExpression.evaluateExpression(symbolTable, heapTable);
             if(rightValue.getType().equals(new BoolType())){
                 BooleanValue val1 = (BooleanValue) leftValue;
                 BooleanValue val2 = (BooleanValue) rightValue;

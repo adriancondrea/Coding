@@ -2,6 +2,7 @@ package Model.Statement;
 
 import CustomException.CustomException;
 import Model.AbstractDataTypes.DictionaryInterface;
+import Model.AbstractDataTypes.HeapInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.StringType;
@@ -12,17 +13,18 @@ import CustomException.CollectionException;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class closeRFile implements Statement{
+public class CloseReadFileStatement implements Statement{
     Expression expression;
 
-    public closeRFile(Expression expression){
+    public CloseReadFileStatement(Expression expression){
         this.expression = expression;
     }
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {
         DictionaryInterface<String, Value> symbolTable = currentState.getSymbolTable();
         DictionaryInterface<StringValue, BufferedReader> fileTable = currentState.getFileTable();
-        Value expressionValue = expression.evaluateExpression(symbolTable);
+        HeapInterface<Value> heapTable = currentState.getHeapTable();
+        Value expressionValue = expression.evaluateExpression(symbolTable, heapTable);
         if(expressionValue.getType().equals(new StringType())) {
             BufferedReader bufferedReader;
             try {
@@ -42,6 +44,7 @@ public class closeRFile implements Statement{
             throw new FileException("Expression evaluation not StringType!");
         }
         currentState.setSymbolTable(symbolTable);
+        currentState.setHeapTable(heapTable);
         currentState.setFileTable(fileTable);
         return currentState;
     }

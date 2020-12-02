@@ -1,7 +1,7 @@
 package Model.Expression;
 
-import CustomException.CustomException;
 import Model.AbstractDataTypes.DictionaryInterface;
+import Model.AbstractDataTypes.HeapInterface;
 import Model.Value.Value;
 
 public class VariableNameExpression implements Expression{
@@ -12,7 +12,7 @@ public class VariableNameExpression implements Expression{
     }
 
     @Override
-    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable) throws CustomException {
+    public Value evaluateExpression(DictionaryInterface<String, Value> symbolTable, HeapInterface<Value> heapTable) {
         return symbolTable.lookup(variableName);
     }
 

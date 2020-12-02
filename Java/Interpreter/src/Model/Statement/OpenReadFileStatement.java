@@ -2,7 +2,7 @@ package Model.Statement;
 
 import CustomException.CustomException;
 import Model.AbstractDataTypes.DictionaryInterface;
-import Model.AbstractDataTypes.StackInterface;
+import Model.AbstractDataTypes.HeapInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.StringType;
@@ -14,9 +14,9 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class OpenRFile implements Statement{
+public class OpenReadFileStatement implements Statement{
     Expression exp;
-    public OpenRFile(Expression exp){
+    public OpenReadFileStatement(Expression exp){
         this.exp = exp;
     }
 
@@ -24,7 +24,8 @@ public class OpenRFile implements Statement{
     public ProgramState execute(ProgramState currentState) throws CustomException {
         DictionaryInterface<String, Value> symbolTable = currentState.getSymbolTable();
         DictionaryInterface<StringValue, BufferedReader> fileTable = currentState.getFileTable();
-        Value value = exp.evaluateExpression(symbolTable);
+        HeapInterface<Value> heapTable = currentState.getHeapTable();
+        Value value = exp.evaluateExpression(symbolTable, heapTable);
         if(value.getType().equals(new StringType())){
             StringValue stringValue = (StringValue) value;
             if(fileTable.isDefined(stringValue)){

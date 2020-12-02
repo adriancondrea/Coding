@@ -22,7 +22,7 @@ public class ConditionalStatement implements Statement{
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {
         StackInterface<Statement> executionStack = currentState.getExecutionStack();
-        Value expressionValue = condition.evaluateExpression(currentState.getSymbolTable());
+        Value expressionValue = condition.evaluateExpression(currentState.getSymbolTable(), currentState.getHeapTable());
         if(!expressionValue.getType().equals(new BoolType()))
             throw new StatementException("Conditional expression is not a boolean!\n");
         else {
