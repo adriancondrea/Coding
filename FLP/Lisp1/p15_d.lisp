@@ -8,7 +8,7 @@ belongs(l1,l2,..,ln, e) = {
 }
 
 all_elements_belong(set1, set2)
-all_elements_belong(s1,s2,..sn, q1,q2,..,qn) = {
+all_elements_belong(s1,s2,..sn, q1,q2,..,qm) = {
 													true, s - empty set
 													all_elements_belong(s2,s3,..,sn, q1,q2,..,qn), belongs(q, s1)
 													false, otherwise
