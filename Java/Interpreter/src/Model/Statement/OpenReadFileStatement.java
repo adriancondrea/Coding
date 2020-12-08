@@ -44,7 +44,7 @@ public class OpenReadFileStatement implements Statement{
             throw new FileException("Expression evaluation not StringType!");
         }
         currentState.setFileTable(fileTable);
-        return currentState;
+        return null;
     }
 
     @Override

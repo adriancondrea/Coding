@@ -20,7 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36ae7573-5ef1-40ee-ac87-ecd88ad40038" name="Default Changelist" comment="A4 finished">
+      <change afterPath="$PROJECT_DIR$/src/Model/Statement/ForkStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AbstractDataTypes/DictionaryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AbstractDataTypes/DictionaryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AbstractDataTypes/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AbstractDataTypes/ListInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AbstractDataTypes/MyDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AbstractDataTypes/MyDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AbstractDataTypes/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AbstractDataTypes/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ProgramState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/ProgramState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/AssignmentStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/AssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/CloseReadFileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/CloseReadFileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/CompoundStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/CompoundStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/ConditionalStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/ConditionalStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/HeapAllocationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/HeapAllocationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/NopStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/NopStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/OpenReadFileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/OpenReadFileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/PrintStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/PrintStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/ReadNumberFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/ReadNumberFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/VariableDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/VariableDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Statement/WriteHeapStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Statement/WriteHeapStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/memoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/memoryRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +93,17 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Interpreter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,6 +172,7 @@
       <workItem from="1606412075063" duration="4029000" />
       <workItem from="1606477443160" duration="3602000" />
       <workItem from="1607084059717" duration="430000" />
+      <workItem from="1607424933142" duration="13476000" />
     </task>
     <task id="LOCAL-00001" summary="updated view">
       <created>1604259706418</created>
@@ -227,12 +260,12 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="184" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/253.1103.1440.821/0.23.1920.1057@0.23.1920.1057" timestamp="1603297862937" />
-    <state x="786" y="1216" key="#com.intellij.ide.util.MemberChooser" timestamp="1606425569618">
+    <state x="786" y="1216" key="#com.intellij.ide.util.MemberChooser" timestamp="1607463364394">
       <screen x="253" y="1080" width="1440" height="900" />
     </state>
     <state x="533" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1605824330552" />
     <state x="533" y="146" key="#com.intellij.ide.util.MemberChooser/0.23.1440.821@0.23.1440.821" timestamp="1605182615744" />
-    <state x="786" y="1216" key="#com.intellij.ide.util.MemberChooser/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606425569618" />
+    <state x="786" y="1216" key="#com.intellij.ide.util.MemberChooser/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1607463364394" />
     <state x="786" y="1216" key="#com.intellij.ide.util.MemberChooser/253.1080.1440.900/0.25.1920.1055@253.1080.1440.900" timestamp="1605798451977" />
     <state x="711" y="182" key="#com.intellij.ide.util.MemberChooser/253.1103.1440.821/0.23.1920.1057@0.23.1920.1057" timestamp="1603745546229" />
     <state x="786" y="1227" key="#com.intellij.ide.util.MemberChooser/253.1103.1440.821/0.23.1920.1057@253.1103.1440.821" timestamp="1605195851761" />
@@ -323,10 +356,10 @@
     </state>
     <state x="340" y="1115" key="new project wizard/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606127999293" />
     <state x="340" y="1135" key="new project wizard/253.1103.1440.821/0.23.1920.1057@253.1103.1440.821" timestamp="1603641335034" />
-    <state x="813" y="1458" key="refactoring.ChangeSignatureDialog" timestamp="1606426822761">
+    <state x="813" y="1458" key="refactoring.ChangeSignatureDialog" timestamp="1607465041797">
       <screen x="253" y="1080" width="1440" height="900" />
     </state>
-    <state x="813" y="1458" key="refactoring.ChangeSignatureDialog/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1606426822761" />
+    <state x="813" y="1458" key="refactoring.ChangeSignatureDialog/253.1080.1440.900/0.0.1920.1080@253.1080.1440.900" timestamp="1607465041797" />
     <state x="749" y="1286" key="refactoring.ChangeSignatureDialog/253.1103.1440.821/0.23.1920.1057@253.1103.1440.821" timestamp="1603737855456" />
     <state x="638" y="1239" width="670" height="742" key="search.everywhere.popup" timestamp="1606332054027">
       <screen x="253" y="1080" width="1440" height="900" />

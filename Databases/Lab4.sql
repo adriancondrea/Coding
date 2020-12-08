@@ -315,12 +315,10 @@ as
             @number_of_rows int,
             @position int,
             @table_id int,
-            --global = entire test
-            @global_start_time datetime2,
-            @global_end_time datetime2,
-            --local = subtests
-            @local_start_time datetime2,
-            @local_end_time datetime2,
+            @test_start_time datetime2,
+            @test_end_time datetime2,
+            @subtest_start_time datetime2,
+            @subtest_end_time datetime2,
             @view_id int,
             @view varchar(50),
             @test_run_id int,
@@ -334,7 +332,7 @@ as
         ('Test results for ' + @test_name)
 
         set @test_run_id = convert(int, (select last_value from sys.identity_columns where name = 'TestRunID'))
-        set @global_start_time = sysdatetime()
+        set @test_start_time = sysdatetime()
 
         --delete data from test's tables in order specified by position
         open TablesCursor
@@ -355,12 +353,12 @@ as
         while @@FETCH_STATUS = 0
         begin
             set @command = 'procedure_populate_table ''' + @table + ''', ' + CONVERT(VARCHAR(10), @number_of_rows)
-            set @local_start_time = sysdatetime()
+            set @subtest_start_time = sysdatetime()
             exec(@command)
-            set @local_end_time = sysdatetime()
+            set @subtest_end_time = sysdatetime()
             print 'finished inserting data in ' + @table
             insert TestRunTables(TestRunID, TableID, StartAt, EndAt)
-            values (@test_run_id, @table_id, @local_start_time, @local_end_time)
+            values (@test_run_id, @table_id, @subtest_start_time, @subtest_end_time)
 
             fetch prior from TablesCursor
             into @table_id, @table, @number_of_rows
@@ -374,19 +372,19 @@ as
         while @@fetch_status = 0
         begin
             set @command = 'select * from ' + @view
-            set @local_start_time = sysdatetime()
+            set @subtest_start_time = sysdatetime()
             exec(@command)
-            set @local_end_time = sysdatetime()
+            set @subtest_end_time = sysdatetime()
             insert TestRunViews (TestRunID, ViewID, StartAt, EndAt)
-            values (@test_run_id, @view_id, @local_start_time, @local_end_time)
+            values (@test_run_id, @view_id, @subtest_start_time, @subtest_end_time)
             fetch ViewsCursor
             into @view_id, @view
         end
-        set @global_end_time = sysdatetime()
+        set @test_end_time = sysdatetime()
 
         --add the start/end times
         update TestRuns
-        set StartAt = @global_start_time, EndAt = @global_end_time
+        set StartAt = @test_start_time, EndAt = @test_end_time
         where TestRunID = @test_run_id
 
         close TablesCursor
@@ -465,3 +463,6 @@ exec procedure_run_test 'test2'
 
 exec procedure_test_results 'test1'
 exec procedure_test_results 'test2'
+
+select * from TestRuns
+select * from TestRunTables

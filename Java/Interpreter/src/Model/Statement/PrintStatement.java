@@ -18,7 +18,7 @@ public class PrintStatement implements Statement{
         ListInterface<Value> outputList = currentState.getOutputList();
         outputList.add(expression.evaluateExpression(currentState.getSymbolTable(), currentState.getHeapTable()));
         currentState.setOutputList(outputList);
-        return currentState;
+        return null;
     }
 
     @Override

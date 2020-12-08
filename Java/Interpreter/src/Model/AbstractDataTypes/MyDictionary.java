@@ -2,8 +2,11 @@ package Model.AbstractDataTypes;
 
 import CustomException.CollectionException;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     Map<K, V> map;
@@ -59,7 +62,19 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
 
     @Override
     public Map<K, V> getContent() {
-        return (Map<K, V>) map;
+        return map;
+    }
+
+    @Override
+    public DictionaryInterface<K, V> deepCopy() {
+        DictionaryInterface<K, V> copy = new MyDictionary<K, V>();
+        map.keySet().forEach(e -> copy.add(e, map.get(e)));
+        return copy;
+    }
+
+    @Override
+    public List<V> getValues() {
+        return new ArrayList<>(map.values());
     }
 
     @Override

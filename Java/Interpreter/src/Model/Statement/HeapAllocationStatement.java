@@ -46,7 +46,7 @@ public class HeapAllocationStatement implements Statement{
 
         currentState.setHeapTable(heapTable);
         currentState.setSymbolTable(symbolTable);
-        return currentState;
+        return null;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package Model;
 
+import CustomException.CustomException;
 import Model.AbstractDataTypes.*;
 import Model.Statement.Statement;
 import Model.Value.StringValue;
@@ -15,6 +16,7 @@ public class ProgramState {
     DictionaryInterface<StringValue, BufferedReader> fileTable;
     HeapInterface<Value> heapTable;
     Statement originalProgram;
+    public final Integer id;
 
     public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable, HeapInterface<Value> heapTable, Statement originalProgram) {
         this.executionStack = executionStack;
@@ -23,9 +25,16 @@ public class ProgramState {
         this.fileTable = fileTable;
         this.heapTable = heapTable;
         this.originalProgram = originalProgram;
+        id = newId();
         if(originalProgram != null)
             executionStack.push(originalProgram);
     }
+
+    private Integer newId() {
+        return 1;
+        //TODO: implement this to return unique id's
+    }
+
     public StackInterface<Statement> getExecutionStack() {
         return executionStack;
     }
@@ -52,6 +61,7 @@ public class ProgramState {
         this.symbolTable = symbolTable;
     }
 
+
     public DictionaryInterface<StringValue, BufferedReader> getFileTable() {
         return fileTable;
     }
@@ -59,6 +69,7 @@ public class ProgramState {
     public void setFileTable(DictionaryInterface<StringValue, BufferedReader> fileTable) {
         this.fileTable = fileTable;
     }
+
 
     public HeapInterface<Value> getHeapTable() {
         return heapTable;
@@ -70,7 +81,8 @@ public class ProgramState {
 
     @Override
     public String toString() {
-        return "\t\t~~Execution Stack~\n" +
+        return "~~id: " + id.toString()+"~~\n"+
+                "\t\t~~Execution Stack~~\n" +
                 executionStack.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
                 "\n\t\t~~Symbol Table~~\n" +
@@ -85,5 +97,16 @@ public class ProgramState {
                 "\n\t\t~~Heap Table~~\n"+
                 heapTable.toString()+
                 "~~~~~~~~~~END OF STATE~~~~~~~~~~";
+    }
+
+    public Boolean isNotCompleted() {
+        return !this.getExecutionStack().isEmpty();
+    }
+
+    public ProgramState oneStepExecution() {
+        if(executionStack.isEmpty())
+            throw new CustomException("Stack is empty!");
+        Statement currentStatement = executionStack.pop();
+        return currentStatement.execute(this);
     }
 }

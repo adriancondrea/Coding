@@ -48,7 +48,7 @@ public class WriteHeapStatement implements Statement{
         }
         currentState.setHeapTable(heapTable);
         currentState.setSymbolTable(symbolTable);
-        return currentState;
+        return null;
     }
 
     @Override

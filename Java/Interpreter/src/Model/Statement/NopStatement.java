@@ -8,7 +8,7 @@ public class NopStatement implements Statement{
 
     @Override
     public ProgramState execute(ProgramState currentState) throws CustomException {
-        return currentState;
+        return null;
     }
 
     @Override

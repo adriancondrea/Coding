@@ -30,7 +30,7 @@ public class AssignmentStatement implements Statement{
         else throw new StatementException("Variable Id is not declared!\n");
         currentState.setSymbolTable(symbolTable);
         currentState.setHeapTable(heapTable);
-        return currentState;
+        return null;
     }
 
     @Override

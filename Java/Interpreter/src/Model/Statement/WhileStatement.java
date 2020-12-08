@@ -36,7 +36,7 @@ public class WhileStatement implements Statement {
             throw new StatementException("Expression of while does not evaluate to a Boolean Value!");
         }
         currentState.setExecutionStack(executionStack);
-        return currentState;
+        return null;
     }
 
     @Override

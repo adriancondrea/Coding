@@ -62,7 +62,7 @@ public class ReadNumberFromFile implements Statement{
         }
         currentState.setSymbolTable(symbolTable);
         currentState.setFileTable(fileTable);
-        return currentState;
+        return null;
     }
 
     @Override

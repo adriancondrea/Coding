@@ -10,9 +10,10 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.List;
 
 public class memoryRepository implements Repository{
-    LinkedList<ProgramState> programStates;
+    List<ProgramState> programStates;
     String logFilePath = "log.txt";
 
     public memoryRepository(){
@@ -32,15 +33,9 @@ public class memoryRepository implements Repository{
 
     @Override
     public void addState(ProgramState newState) {
-        programStates.addLast(newState);
+        programStates.add(newState);
     }
 
-    @Override
-    public ProgramState getCurrentProgram() {
-        ProgramState currentProgram = programStates.getFirst();
-        programStates.removeFirst();
-        return currentProgram;
-    }
 
     @Override
     public void logProgramStateExecution(ProgramState programState) {
@@ -56,5 +51,15 @@ public class memoryRepository implements Repository{
         logFile.println(programState);
         logFile.println("Log ended!\n\n\n");
         logFile.close();
+    }
+
+    @Override
+    public List<ProgramState> getProgramStates() {
+        return programStates;
+    }
+
+    @Override
+    public void setProgramStates(List<ProgramState> newProgramList) {
+        programStates = newProgramList;
     }
 }

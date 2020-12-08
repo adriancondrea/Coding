@@ -3,6 +3,7 @@ package Model.AbstractDataTypes;
 import CustomException.CollectionException;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class MyList<T> implements ListInterface<T>{
     LinkedList<T> list;
@@ -10,6 +11,10 @@ public class MyList<T> implements ListInterface<T>{
     //default constructor
     public MyList() {list = new LinkedList<T>(); }
 
+    public MyList(List<T> list) {
+        this.list = new LinkedList<>();
+        this.list.addAll(list);
+    }
     @Override
     public void add(T element) throws CollectionException {
         list.add(element);
@@ -20,6 +25,11 @@ public class MyList<T> implements ListInterface<T>{
         if(list.isEmpty())
             throw new CollectionException("list is empty!");
         return list.pop();
+    }
+
+    @Override
+    public List<T> getList() {
+        return list;
     }
 
     @Override

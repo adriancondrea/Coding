@@ -2,6 +2,7 @@ package Model.AbstractDataTypes;
 
 import CustomException.CollectionException;
 
+import java.util.List;
 import java.util.Map;
 
 public interface DictionaryInterface<K, V> {
@@ -12,4 +13,6 @@ public interface DictionaryInterface<K, V> {
     String KeysToString();
     V remove(K key);
     Map<K, V> getContent();
+    DictionaryInterface<K, V> deepCopy();
+    List<V> getValues();
 }

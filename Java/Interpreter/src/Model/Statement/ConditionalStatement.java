@@ -31,7 +31,7 @@ public class ConditionalStatement implements Statement{
             else
                 executionStack.push(falseBranch);
             currentState.setExecutionStack(executionStack);
-            return currentState;
+            return null;
         }
     }
 

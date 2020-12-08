@@ -46,7 +46,7 @@ public class CloseReadFileStatement implements Statement{
         currentState.setSymbolTable(symbolTable);
         currentState.setHeapTable(heapTable);
         currentState.setFileTable(fileTable);
-        return currentState;
+        return null;
     }
 
     @Override

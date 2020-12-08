@@ -20,7 +20,7 @@ public class VariableDeclarationStatement implements  Statement{
         else
             symbolTable.add(variableName, type.defaultValue());
         currentState.setSymbolTable(symbolTable);
-        return currentState;
+        return null;
     }
 
     @Override
