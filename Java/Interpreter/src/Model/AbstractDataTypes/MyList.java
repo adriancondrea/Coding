@@ -9,7 +9,7 @@ public class MyList<T> implements ListInterface<T>{
     LinkedList<T> list;
 
     //default constructor
-    public MyList() {list = new LinkedList<T>(); }
+    public MyList() {list = new LinkedList<>(); }
 
     public MyList(List<T> list) {
         this.list = new LinkedList<>();

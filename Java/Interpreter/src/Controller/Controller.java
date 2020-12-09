@@ -36,7 +36,7 @@ public class Controller {
 
         //start the execution of the callables
         //it returns the list of new created PrgStates (namely threads)
-        List<ProgramState> newProgramStates = null;
+        List<ProgramState> newProgramStates;
         try {
             newProgramStates = executor.invokeAll(callList).stream()
                     .map(future -> {

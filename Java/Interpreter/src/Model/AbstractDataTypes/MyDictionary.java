@@ -67,7 +67,7 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
 
     @Override
     public DictionaryInterface<K, V> deepCopy() {
-        DictionaryInterface<K, V> copy = new MyDictionary<K, V>();
+        DictionaryInterface<K, V> copy = new MyDictionary<>();
         map.keySet().forEach(e -> copy.add(e, map.get(e)));
         return copy;
     }

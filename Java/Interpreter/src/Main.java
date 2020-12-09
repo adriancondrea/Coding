@@ -22,8 +22,18 @@ import View.TextMenu;
 import java.io.File;
 
 public class Main {
-    public static void main(String[] args) {
+
+    static void deletePreviousLogs() {
         int numberOfPrograms = 14;
+        for(int i = 1; i <=numberOfPrograms; i++) {
+            File fileToDelete = new File("log" + i + ".txt");
+            if(fileToDelete.delete())
+                System.out.println("deleted log file " + fileToDelete.toString());
+        }
+    }
+
+    public static void main(String[] args) {
+        deletePreviousLogs();
 
         Statement ex1 = new CompoundStatement(new VariableDeclarationStatement("v",new IntegerType()),
                         new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(2))),
@@ -147,27 +157,7 @@ public class Main {
         Repository repository13 = new memoryRepository(program13, "log13.txt");
         Controller controller13 = new Controller(repository13);
 
-        /*
-        Statement ex14 = new CompoundStatement(
-                new CompoundStatement(
-                new CompoundStatement(
-                        new CompoundStatement(
-                                new CompoundStatement(
-                                        new CompoundStatement(new VariableDeclarationStatement("v", new IntegerType()),
-                                                new VariableDeclarationStatement("a", new ReferenceType(new IntegerType()))),
-                                        new AssignmentStatement("v", new ValueExpression(new NumberValue(10)))),
-                                new HeapAllocationStatement("a", new ValueExpression(new NumberValue(22)))),
-                        new ForkStatement(
-                                new CompoundStatement(
-                                        new CompoundStatement(
-                                                new CompoundStatement(
-                                                        new WriteHeapStatement("a", new ValueExpression(new NumberValue(30))),
-                                                        new AssignmentStatement("v", new ValueExpression(new NumberValue(32)))),
-                                                new PrintStatement(new VariableNameExpression("v"))),
-                                        new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a"))))
-                        )),new PrintStatement(new VariableNameExpression("v"))),
-                        new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a"))));
-         */
+
         Statement ex14 = new CompoundStatement(new VariableDeclarationStatement("v",new IntegerType()),
                 new CompoundStatement(new VariableDeclarationStatement("a",new ReferenceType(new IntegerType())),
                         new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(10))),
@@ -184,10 +174,6 @@ public class Main {
         Repository repository14 = new memoryRepository(program14, "log14.txt");
         Controller controller14 = new Controller(repository14);
 
-        for(int i = 1; i <=numberOfPrograms; i++) {
-            File fileToDelete = new File("log" + i + ".txt");
-            fileToDelete.delete();
-        }
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
