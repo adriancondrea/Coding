@@ -7,6 +7,7 @@ import Model.Value.StringValue;
 import Model.Value.Value;
 
 import java.io.BufferedReader;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProgramState {
 
@@ -16,6 +17,7 @@ public class ProgramState {
     DictionaryInterface<StringValue, BufferedReader> fileTable;
     HeapInterface<Value> heapTable;
     Statement originalProgram;
+    static final AtomicInteger previousId = new AtomicInteger(1);
     public final Integer id;
 
     public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable, HeapInterface<Value> heapTable, Statement originalProgram) {
@@ -31,8 +33,7 @@ public class ProgramState {
     }
 
     private Integer newId() {
-        return 1;
-        //TODO: implement this to return unique id's
+        return previousId.incrementAndGet();
     }
 
     public StackInterface<Statement> getExecutionStack() {
@@ -82,19 +83,19 @@ public class ProgramState {
     @Override
     public String toString() {
         return "~~id: " + id.toString()+"~~\n"+
-                "\t\t~~Execution Stack~~\n" +
+                "\t\t~~Execution Stack_"+id.toString()+"~~\n" +
                 executionStack.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~Symbol Table~~\n" +
+                "\n\t\t~~Symbol Table_"+id.toString()+"~~\n" +
                 symbolTable.toString() +
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~Output List~~\n" +
+                "\n\t\t~~Output List_"+id.toString()+"~~\n" +
                 outputList.toString()+
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~File Table~~\n"+
+                "\n\t\t~~File Table_"+id.toString()+"~~\n"+
                 fileTable.KeysToString()+
                 "~~~~~~~~~~~~~~~~~~~~~~~~"+
-                "\n\t\t~~Heap Table~~\n"+
+                "\n\t\t~~Heap Table_"+id.toString()+"~~\n"+
                 heapTable.toString()+
                 "~~~~~~~~~~END OF STATE~~~~~~~~~~";
     }

@@ -14,7 +14,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 public class Controller {
@@ -59,22 +58,25 @@ public class Controller {
         programStates.forEach(program -> repository.logProgramStateExecution(program));
         repository.setProgramStates(programStates);
         }
-        
-    private Map<Integer, Value> garbageCollector(List<Integer> referredAddresses, Map<Integer, Value> heapTable) {
-        return heapTable.entrySet().stream()
-                .filter(e -> referredAddresses.contains(e.getKey()))
+
+
+    Map<Integer, Value> garbageCollector(Set<Integer> symbolTableAddresses, Map<Integer, Value> heap){
+        return heap.entrySet().stream()
+                .filter(e -> symbolTableAddresses.contains(e.getKey()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    private Set<Integer> getReferredAddresses(Collection<Value> symbolTableValues, Collection<Value> heapTableValues) {
-        return Stream.concat(
-                symbolTableValues.stream()
-                        .filter(v -> v instanceof ReferenceValue)
-                        .map(v -> {ReferenceValue v1 = (ReferenceValue) v; return v1.getAddress();}),
-                heapTableValues.stream()
-                        .filter(v -> v instanceof ReferenceValue)
-                        .map(v -> {ReferenceValue v1 = (ReferenceValue) v; return v1.getAddress();}))
-                .collect(Collectors.toSet());
+    Set<Integer> getSymbolTableAddresses(List<Collection<Value>> symbolTableValues, Map<Integer, Value> heapTable) {
+        Set<Integer> symbolTableAddresses = new TreeSet<>();
+        symbolTableValues.forEach(symbolTable -> symbolTable.stream()
+        .filter(v -> v instanceof ReferenceValue)
+        .forEach(v -> {
+            while (v instanceof ReferenceValue){
+                symbolTableAddresses.add(((ReferenceValue) v).getAddress());
+                v = heapTable.get(((ReferenceValue) v).getAddress());
+            }
+        }));
+        return symbolTableAddresses;
     }
 
     public void setDisplayState(Boolean displayState) { this.displayState = displayState; }
@@ -88,7 +90,7 @@ public class Controller {
             ProgramState state = programStates.get(0);
             state.getHeapTable().setContent(
                     garbageCollector(
-                    getReferredAddresses(
+                    getSymbolTableAddresses(
                             programStates.stream().map(programState -> programState.getSymbolTable().getContent().values()).collect(Collectors.toList()),
                             state.getHeapTable().getContent()
                     ),
@@ -102,22 +104,6 @@ public class Controller {
         //HERE the repository still contains at least one Completed program
         //and its List<ProgramState> is not empty. We have to eupdate the repository state
         repository.setProgramStates(programStates);
-        //OLD
-        ProgramState programState = repository.getCurrentProgram();
-        repository.logProgramStateExecution(programState);
-        if(displayState){
-            System.out.println(programState.toString());
-        }
-        while (!programState.getExecutionStack().isEmpty()){
-                oneStepExecution(programState);
-                if(displayState)
-                    System.out.println(programState.toString());
-                repository.logProgramStateExecution(programState);
-                programState.getHeapTable().setContent(garbageCollector(
-                        getReferredAddresses(programState.getSymbolTable().getContent().values(), programState.getHeapTable().getContent().values()),
-                        programState.getHeapTable().getContent()));
-                repository.logProgramStateExecution(programState);
-        }
     }
 
     public void createState(Statement program){

@@ -1,8 +1,8 @@
 import Controller.Controller;
 import Model.AbstractDataTypes.MyDictionary;
+import Model.AbstractDataTypes.MyHeap;
 import Model.AbstractDataTypes.MyList;
 import Model.AbstractDataTypes.MyStack;
-import Model.AbstractDataTypes.MyHeap;
 import Model.Expression.*;
 import Model.ProgramState;
 import Model.Statement.*;
@@ -12,19 +12,18 @@ import Model.Type.ReferenceType;
 import Model.Type.StringType;
 import Model.Value.BooleanValue;
 import Model.Value.NumberValue;
-import Model.Value.ReferenceValue;
 import Model.Value.StringValue;
 import Repository.Repository;
 import Repository.memoryRepository;
 import View.Command.ExitCommand;
 import View.Command.RunExample;
 import View.TextMenu;
-import com.sun.jdi.IntegerValue;
 
-import javax.naming.ldap.Control;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
+        int numberOfPrograms = 14;
 
         Statement ex1 = new CompoundStatement(new VariableDeclarationStatement("v",new IntegerType()),
                         new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(2))),
@@ -148,6 +147,48 @@ public class Main {
         Repository repository13 = new memoryRepository(program13, "log13.txt");
         Controller controller13 = new Controller(repository13);
 
+        /*
+        Statement ex14 = new CompoundStatement(
+                new CompoundStatement(
+                new CompoundStatement(
+                        new CompoundStatement(
+                                new CompoundStatement(
+                                        new CompoundStatement(new VariableDeclarationStatement("v", new IntegerType()),
+                                                new VariableDeclarationStatement("a", new ReferenceType(new IntegerType()))),
+                                        new AssignmentStatement("v", new ValueExpression(new NumberValue(10)))),
+                                new HeapAllocationStatement("a", new ValueExpression(new NumberValue(22)))),
+                        new ForkStatement(
+                                new CompoundStatement(
+                                        new CompoundStatement(
+                                                new CompoundStatement(
+                                                        new WriteHeapStatement("a", new ValueExpression(new NumberValue(30))),
+                                                        new AssignmentStatement("v", new ValueExpression(new NumberValue(32)))),
+                                                new PrintStatement(new VariableNameExpression("v"))),
+                                        new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a"))))
+                        )),new PrintStatement(new VariableNameExpression("v"))),
+                        new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a"))));
+         */
+        Statement ex14 = new CompoundStatement(new VariableDeclarationStatement("v",new IntegerType()),
+                new CompoundStatement(new VariableDeclarationStatement("a",new ReferenceType(new IntegerType())),
+                        new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(10))),
+                                new CompoundStatement(new HeapAllocationStatement("a",new ValueExpression(new NumberValue(22))),
+                                        new CompoundStatement(new ForkStatement(new CompoundStatement(
+                                                new WriteHeapStatement("a",new ValueExpression(new NumberValue(30))),
+                                                new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(32))),
+                                                        new CompoundStatement(new PrintStatement(new VariableNameExpression("v")),
+                                                                new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a"))))))),
+                                                new CompoundStatement(new PrintStatement(new VariableNameExpression("v")),
+                                                        new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a")))))))));
+
+        ProgramState program14 = new ProgramState(new MyStack<>(), new MyDictionary<>(), new MyList<>(), new MyDictionary<>(), new MyHeap<>(), ex14);
+        Repository repository14 = new memoryRepository(program14, "log14.txt");
+        Controller controller14 = new Controller(repository14);
+
+        for(int i = 1; i <=numberOfPrograms; i++) {
+            File fileToDelete = new File("log" + i + ".txt");
+            fileToDelete.delete();
+        }
+
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
         menu.addCommand(new RunExample("1", ex1.toString(), controller1));
@@ -163,6 +204,7 @@ public class Main {
         menu.addCommand(new RunExample("11", ex11.toString(), controller11));
         menu.addCommand(new RunExample("12", ex12.toString(), controller12));
         menu.addCommand(new RunExample("13", ex13.toString(), controller13));
+        menu.addCommand(new RunExample("14", ex14.toString(), controller14));
         menu.show();
     }
 }

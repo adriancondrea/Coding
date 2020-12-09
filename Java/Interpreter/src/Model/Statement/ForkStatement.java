@@ -21,7 +21,7 @@ public class ForkStatement implements Statement{
                                 currentState.getOutputList(),
                                 currentState.getFileTable(),
                                 currentState.getHeapTable(),
-                                statement);
+                                null);
     }
 
     @Override
