@@ -18,7 +18,7 @@ public class ProgramState {
     private DictionaryInterface<StringValue, BufferedReader> fileTable;
     private HeapInterface<Value> heapTable;
     Statement originalProgram;
-    static final AtomicInteger previousId = new AtomicInteger(1);
+    static final AtomicInteger previousId = new AtomicInteger(0);
     public final Integer id;
 
     public ProgramState(StackInterface<Statement> executionStack, DictionaryInterface<String, Value> symbolTable, ListInterface<Value> outputList, DictionaryInterface<StringValue, BufferedReader> fileTable, HeapInterface<Value> heapTable, Statement originalProgram) {

@@ -67,7 +67,7 @@ public class Controller {
     }
 
     Set<Integer> getSymbolTableAddresses(List<Collection<Value>> symbolTableValues, Map<Integer, Value> heapTable) {
-        Set<Integer> symbolTableAddresses = new TreeSet<>();
+        Set<Integer> symbolTableAddresses = new HashSet<>();
         symbolTableValues.forEach(symbolTable -> symbolTable.stream()
         .filter(v -> v instanceof ReferenceValue)
         .forEach(v -> {
