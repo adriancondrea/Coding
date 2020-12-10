@@ -1,9 +1,12 @@
 package Model.Expression;
 
 import CustomException.ExpressionException;
+import CustomException.TypecheckException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
+import Model.Type.BoolType;
 import Model.Type.IntegerType;
+import Model.Type.Type;
 import Model.Value.BooleanValue;
 import Model.Value.NumberValue;
 import Model.Value.Value;
@@ -51,6 +54,20 @@ public class RelationalExpression implements Expression{
         else {
             throw new ExpressionException("Left side of relational expression not integer!");
         }
+    }
+
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type leftType, rightType;
+        leftType = leftExpression.typecheck(typeEnvironment);
+        rightType = rightExpression.typecheck(typeEnvironment);
+        if (leftType.equals(new IntegerType())){
+            if(rightType.equals(new IntegerType())){
+                return new BoolType();
+            }
+            else throw new TypecheckException("Right operand is not an integer!");
+        }
+        else throw new TypecheckException("Left operand is not an integer!");
     }
 
     @Override

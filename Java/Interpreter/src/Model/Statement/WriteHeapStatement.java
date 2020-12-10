@@ -1,10 +1,13 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.TypecheckException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
+import Model.Type.ReferenceType;
+import Model.Type.Type;
 import Model.Value.ReferenceValue;
 import Model.Value.Value;
 import CustomException.StatementException;
@@ -49,6 +52,18 @@ public class WriteHeapStatement implements Statement{
         currentState.setHeapTable(heapTable);
         currentState.setSymbolTable(symbolTable);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type variableType = typeEnvironment.lookup(variableName);
+        Type expressionType = expression.typecheck(typeEnvironment);
+        if(variableType.equals(new ReferenceType(expressionType))){
+            return typeEnvironment;
+        }
+        else{
+            throw new TypecheckException("WriteHeapStatement: right hand side and left hand side have different types!");
+        }
     }
 
     @Override

@@ -3,6 +3,7 @@ package Model;
 import CustomException.CustomException;
 import Model.AbstractDataTypes.*;
 import Model.Statement.Statement;
+import Model.Type.Type;
 import Model.Value.StringValue;
 import Model.Value.Value;
 
@@ -109,5 +110,10 @@ public class ProgramState {
             throw new CustomException("Stack is empty!");
         Statement currentStatement = executionStack.pop();
         return currentStatement.execute(this);
+    }
+
+    public void typecheck() {
+        DictionaryInterface<String, Type> typeEnvironment = new MyDictionary<>();
+        this.getExecutionStack().peek().typecheck(typeEnvironment);
     }
 }

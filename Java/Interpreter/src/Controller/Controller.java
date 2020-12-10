@@ -120,4 +120,8 @@ public class Controller {
                 .filter(ProgramState::isNotCompleted)
                 .collect(Collectors.toList());
     }
+
+    public void typecheck() {
+        repository.getProgramStates().get(0).typecheck();
+    }
 }

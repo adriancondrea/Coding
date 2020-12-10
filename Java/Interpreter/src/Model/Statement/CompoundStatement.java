@@ -1,8 +1,10 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.StackInterface;
 import Model.ProgramState;
+import Model.Type.Type;
 
 public class CompoundStatement implements Statement{
     Statement first, second;
@@ -19,6 +21,14 @@ public class CompoundStatement implements Statement{
         executionStack.push(first);
         currentState.setExecutionStack(executionStack);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        //DictionaryInterface<String, Type> typeEnvironment1 = first.typecheck(typeEnvironment);
+        //DictionaryInterface<String, Type> typeEnvironment2 = second.typecheck(typeEnvironment1);
+        //return typeEnvironment2;
+        return second.typecheck(first.typecheck(typeEnvironment));
     }
 
     @Override

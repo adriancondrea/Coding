@@ -1,6 +1,7 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.TypecheckException;
 import CustomException.FileException;
 import CustomException.ExpressionException;
 import CustomException.StatementException;
@@ -9,6 +10,7 @@ import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.IntegerType;
 import Model.Type.StringType;
+import Model.Type.Type;
 import Model.Value.NumberValue;
 import Model.Value.StringValue;
 import Model.Value.Value;
@@ -63,6 +65,21 @@ public class ReadNumberFromFile implements Statement{
         currentState.setSymbolTable(symbolTable);
         currentState.setFileTable(fileTable);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type variableType = typeEnvironment.lookup(variableName);
+        Type expressionType = expression.typecheck(typeEnvironment);
+        if(variableType.equals(new IntegerType())){
+            if(expressionType.equals(new IntegerType())){
+                return typeEnvironment;
+            }
+            throw new TypecheckException("expression not of integer type!");
+        }
+        else {
+            throw new TypecheckException("variable not of integer type!");
+        }
     }
 
     @Override

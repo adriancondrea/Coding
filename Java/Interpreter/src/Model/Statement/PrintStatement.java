@@ -1,9 +1,11 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.ListInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
+import Model.Type.Type;
 import Model.Value.Value;
 
 public class PrintStatement implements Statement{
@@ -19,6 +21,12 @@ public class PrintStatement implements Statement{
         outputList.add(expression.evaluateExpression(currentState.getSymbolTable(), currentState.getHeapTable()));
         currentState.setOutputList(outputList);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        expression.typecheck(typeEnvironment);
+        return typeEnvironment;
     }
 
     @Override

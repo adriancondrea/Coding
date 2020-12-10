@@ -1,10 +1,11 @@
 package Model.Expression;
 
-import CustomException.CustomException;
+import CustomException.TypecheckException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
 import Model.Type.IntegerType;
+import Model.Type.Type;
 import Model.Value.NumberValue;
 import Model.Value.Value;
 
@@ -71,5 +72,19 @@ public class ArithmeticExpression implements Expression{
         }
         else
             throw new ExpressionException("Operand1 is not an integer!\n");
+    }
+
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type leftType, rightType;
+        leftType = leftExpression.typecheck(typeEnvironment);
+        rightType = rightExpression.typecheck(typeEnvironment);
+        if (leftType.equals(new IntegerType())){
+            if(rightType.equals(new IntegerType())){
+                return new IntegerType();
+            }
+            else throw new TypecheckException("Right operand is not an integer!");
+        }
+        else throw new TypecheckException("Left operand is not an integer!");
     }
 }

@@ -1,11 +1,13 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.TypecheckException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.StringType;
+import Model.Type.Type;
 import Model.Value.StringValue;
 import Model.Value.Value;
 import CustomException.FileException;
@@ -47,6 +49,17 @@ public class CloseReadFileStatement implements Statement{
         currentState.setHeapTable(heapTable);
         currentState.setFileTable(fileTable);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type expressionType = expression.typecheck(typeEnvironment);
+        if(expressionType.equals(new StringType())) {
+            return typeEnvironment;
+        }
+        else{
+            throw new TypecheckException("Expression not of type string!");
+        }
     }
 
     @Override

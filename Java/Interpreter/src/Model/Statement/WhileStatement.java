@@ -1,6 +1,7 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.TypecheckException;
 import CustomException.StatementException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
@@ -8,6 +9,7 @@ import Model.AbstractDataTypes.StackInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
 import Model.Type.BoolType;
+import Model.Type.Type;
 import Model.Value.BooleanValue;
 import Model.Value.Value;
 
@@ -37,6 +39,18 @@ public class WhileStatement implements Statement {
         }
         currentState.setExecutionStack(executionStack);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type expressionType = expression.typecheck(typeEnvironment);
+        if(expressionType.equals(new BoolType())){
+            statement.typecheck(typeEnvironment.deepCopy());
+            return typeEnvironment;
+        }
+        else{
+            throw new TypecheckException("While statement: condition not of bool type!");
+        }
     }
 
     @Override

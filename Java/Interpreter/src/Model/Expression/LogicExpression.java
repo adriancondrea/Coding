@@ -1,10 +1,12 @@
 package Model.Expression;
 
-import CustomException.CustomException;
+import CustomException.TypecheckException;
 import CustomException.ExpressionException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
 import Model.Type.BoolType;
+import Model.Type.IntegerType;
+import Model.Type.Type;
 import Model.Value.BooleanValue;
 import Model.Value.Value;
 
@@ -49,6 +51,20 @@ public class LogicExpression implements Expression{
         }
         else
             throw new ExpressionException("Operand1 is not a boolean!\n");
+    }
+
+    @Override
+    public Type typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type leftType, rightType;
+        leftType = leftExpression.typecheck(typeEnvironment);
+        if(leftType.equals(new BoolType())){
+            rightType = rightExpression.typecheck(typeEnvironment);
+            if(rightType.equals(new BoolType())){
+                return new BoolType();
+            }
+            else throw new TypecheckException("Right operand not of bool type!");
+        }
+        else throw new TypecheckException("Left operand not of bool type!");
     }
 
     @Override

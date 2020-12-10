@@ -24,6 +24,12 @@ public class VariableDeclarationStatement implements  Statement{
     }
 
     @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        typeEnvironment.add(variableName, type);
+        return typeEnvironment;
+    }
+
+    @Override
     public String toString() {
         return type.toString() + " " + variableName;
     }

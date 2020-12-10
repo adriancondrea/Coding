@@ -1,9 +1,11 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.MyStack;
 import Model.AbstractDataTypes.StackInterface;
 import Model.ProgramState;
+import Model.Type.Type;
 
 public class ForkStatement implements Statement{
     Statement statement;
@@ -22,6 +24,12 @@ public class ForkStatement implements Statement{
                                 currentState.getFileTable(),
                                 currentState.getHeapTable(),
                                 null);
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        statement.typecheck(typeEnvironment.deepCopy());
+        return typeEnvironment;
     }
 
     @Override

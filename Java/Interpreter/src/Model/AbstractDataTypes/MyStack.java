@@ -32,6 +32,16 @@ public class MyStack<T> implements StackInterface<T> {
     }
 
     @Override
+    public T peek() {
+        if(stack.isEmpty()) {
+            throw new CollectionException("Stack is empty!");
+        }
+        else{
+            return stack.peek();
+        }
+    }
+
+    @Override
     public String toString() {
         if(stack.isEmpty())
             return "EMPTY\n";

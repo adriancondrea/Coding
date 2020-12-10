@@ -1,11 +1,13 @@
 package Model.Statement;
 
 import CustomException.CustomException;
+import CustomException.TypecheckException;
 import CustomException.StatementException;
 import Model.AbstractDataTypes.DictionaryInterface;
 import Model.AbstractDataTypes.HeapInterface;
 import Model.Expression.Expression;
 import Model.ProgramState;
+import Model.Type.Type;
 import Model.Value.Value;
 
 public class AssignmentStatement implements Statement{
@@ -31,6 +33,18 @@ public class AssignmentStatement implements Statement{
         currentState.setSymbolTable(symbolTable);
         currentState.setHeapTable(heapTable);
         return null;
+    }
+
+    @Override
+    public DictionaryInterface<String, Type> typecheck(DictionaryInterface<String, Type> typeEnvironment) {
+        Type variableType = typeEnvironment.lookup(id);
+        Type expressionType = expression.typecheck(typeEnvironment);
+        if(variableType.equals(expressionType)){
+            return typeEnvironment;
+        }
+        else{
+            throw new TypecheckException("Asssignment: right hand side and left hand side have different types!");
+        }
     }
 
     @Override
