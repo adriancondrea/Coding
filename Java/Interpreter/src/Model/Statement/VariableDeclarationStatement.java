@@ -8,8 +8,8 @@ import Model.Type.Type;
 import Model.Value.Value;
 
 public class VariableDeclarationStatement implements  Statement{
-    Type type;
-    String variableName;
+    private final Type type;
+    private final String variableName;
     public VariableDeclarationStatement(String id, Type t){ type = t; variableName = id; }
 
     @Override

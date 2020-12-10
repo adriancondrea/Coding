@@ -13,8 +13,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class memoryRepository implements Repository{
-    List<ProgramState> programStates;
-    String logFilePath = "log.txt";
+    private List<ProgramState> programStates;
+    private String logFilePath = "log.txt";
 
     public memoryRepository(){
         programStates = new LinkedList<>();

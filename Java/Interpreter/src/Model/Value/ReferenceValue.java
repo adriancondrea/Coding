@@ -4,8 +4,8 @@ import Model.Type.ReferenceType;
 import Model.Type.Type;
 
 public class ReferenceValue implements Value{
-    Integer address;
-    Type locationType;
+    private final Integer address;
+    private final Type locationType;
 
     public ReferenceValue(int address, Type type){
         this.address = address;

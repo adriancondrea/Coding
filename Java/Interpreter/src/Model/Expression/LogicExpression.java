@@ -11,8 +11,8 @@ import Model.Value.BooleanValue;
 import Model.Value.Value;
 
 public class LogicExpression implements Expression{
-    Expression leftExpression, rightExpression;
-    int operation;
+    private final Expression leftExpression, rightExpression;
+    private final int operation;
     /*operations legend:
     1- &
     2- |

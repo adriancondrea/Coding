@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
-    final Map<K, V> map;
+    private final Map<K, V> map;
     //default constructor, initializes map as a HashMap
     public MyDictionary() { map = new HashMap<>();
     }

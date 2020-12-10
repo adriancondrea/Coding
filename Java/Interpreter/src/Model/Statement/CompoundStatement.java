@@ -7,7 +7,7 @@ import Model.ProgramState;
 import Model.Type.Type;
 
 public class CompoundStatement implements Statement{
-    Statement first, second;
+    private final Statement first, second;
 
     public CompoundStatement(Statement first, Statement second){
         this.first = first;

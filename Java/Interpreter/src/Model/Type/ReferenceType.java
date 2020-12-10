@@ -4,7 +4,7 @@ import Model.Value.ReferenceValue;
 import Model.Value.Value;
 
 public class ReferenceType implements Type{
-    Type inner;
+    private final Type inner;
 
     public ReferenceType() {
         inner = new IntegerType();

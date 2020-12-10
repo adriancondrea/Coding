@@ -6,7 +6,7 @@ import Model.Type.Type;
 import Model.Value.Value;
 
 public class VariableNameExpression implements Expression{
-    String variableName;
+    private final String variableName;
 
     public VariableNameExpression(String variableName){
         this.variableName = variableName;

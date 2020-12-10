@@ -14,8 +14,8 @@ import Model.Value.BooleanValue;
 import Model.Value.Value;
 
 public class WhileStatement implements Statement {
-    Expression expression;
-    Statement statement;
+    private final Expression expression;
+    private final Statement statement;
 
     public WhileStatement(Expression expression, Statement statement) {
         this.expression = expression;

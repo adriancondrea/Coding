@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MyList<T> implements ListInterface<T>{
-    final LinkedList<T> list;
+    private final LinkedList<T> list;
 
     //default constructor
     public MyList() {list = new LinkedList<>(); }

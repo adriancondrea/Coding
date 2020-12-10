@@ -16,7 +16,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class CloseReadFileStatement implements Statement{
-    Expression expression;
+    private final Expression expression;
 
     public CloseReadFileStatement(Expression expression){
         this.expression = expression;

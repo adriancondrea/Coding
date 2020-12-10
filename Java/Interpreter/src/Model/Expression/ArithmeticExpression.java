@@ -10,8 +10,9 @@ import Model.Value.NumberValue;
 import Model.Value.Value;
 
 public class ArithmeticExpression implements Expression{
-    Expression leftExpression, rightExpression;
-    int operation;
+    private final Expression leftExpression;
+    private final Expression rightExpression;
+    private final int operation;
     /* operations legend:
         1 = *
         2 = /

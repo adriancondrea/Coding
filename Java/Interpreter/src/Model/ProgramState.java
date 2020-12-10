@@ -12,11 +12,11 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProgramState {
 
-    StackInterface<Statement> executionStack;
-    DictionaryInterface<String, Value> symbolTable;
-    ListInterface<Value> outputList;
-    DictionaryInterface<StringValue, BufferedReader> fileTable;
-    HeapInterface<Value> heapTable;
+    private StackInterface<Statement> executionStack;
+    private DictionaryInterface<String, Value> symbolTable;
+    private ListInterface<Value> outputList;
+    private DictionaryInterface<StringValue, BufferedReader> fileTable;
+    private HeapInterface<Value> heapTable;
     Statement originalProgram;
     static final AtomicInteger previousId = new AtomicInteger(1);
     public final Integer id;

@@ -11,8 +11,8 @@ import Model.Type.Type;
 import Model.Value.Value;
 
 public class AssignmentStatement implements Statement{
-    String id;
-    Expression expression;
+    private final String id;
+    private final Expression expression;
 
     public AssignmentStatement(String id, Expression expression){
         this.id = id;

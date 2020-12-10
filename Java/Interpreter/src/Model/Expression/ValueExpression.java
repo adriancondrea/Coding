@@ -6,7 +6,7 @@ import Model.Type.Type;
 import Model.Value.Value;
 
 public class ValueExpression implements Expression{
-    Value result;
+    private final Value result;
     public  ValueExpression(Value value){
         this.result = value;
     }

@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class MyStack<T> implements StackInterface<T> {
-    Deque<T> stack;
+    private final Deque<T> stack;
 
     //default constructor
     public MyStack(){

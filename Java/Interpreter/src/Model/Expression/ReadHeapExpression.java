@@ -10,7 +10,7 @@ import Model.Value.ReferenceValue;
 import Model.Value.Value;
 
 public class ReadHeapExpression implements Expression{
-    Expression expression;
+    private final Expression expression;
     public ReadHeapExpression(Expression expression) {
         this.expression = expression;
     }

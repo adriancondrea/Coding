@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class MyHeap<V> implements HeapInterface<V>{
-    AtomicInteger heapIndex;
-    Map<Integer, V> heap;
+    private final AtomicInteger heapIndex;
+    private Map<Integer, V> heap;
 
     public MyHeap() {
         heap = new HashMap<>();

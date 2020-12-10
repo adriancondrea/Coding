@@ -9,7 +9,7 @@ import Model.Type.Type;
 import Model.Value.Value;
 
 public class PrintStatement implements Statement{
-    Expression expression;
+    private final Expression expression;
 
     public PrintStatement(Expression expression){
         this.expression = expression;

@@ -17,16 +17,16 @@ import java.util.stream.Collectors;
 
 
 public class Controller {
-    Repository repository;
+    private final Repository repository;
     //if displayState flag is set to true, display the program state after each execution
-    Boolean displayState;
-    ExecutorService executor;
+    private Boolean displayState;
+    private ExecutorService executor;
     public Controller(Repository repository){ this.repository = repository; displayState = false; }
 
 
     void oneStepForAllPrograms(List<ProgramState> programStates){
         //before the execution, print the programState list into the log file
-        programStates.forEach(program -> repository.logProgramStateExecution(program));
+        programStates.forEach(repository::logProgramStateExecution);
 
         //run concurrently one step for each of the existing programStates
 
@@ -55,7 +55,7 @@ public class Controller {
             throw new CustomException(e.getMessage());
         }
         programStates.addAll(newProgramStates);
-        programStates.forEach(program -> repository.logProgramStateExecution(program));
+        programStates.forEach(repository::logProgramStateExecution);
         repository.setProgramStates(programStates);
         }
 

@@ -17,7 +17,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class OpenReadFileStatement implements Statement{
-    Expression exp;
+    private final Expression exp;
     public OpenReadFileStatement(Expression exp){
         this.exp = exp;
     }

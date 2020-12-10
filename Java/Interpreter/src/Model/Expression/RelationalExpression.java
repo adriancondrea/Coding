@@ -12,8 +12,8 @@ import Model.Value.NumberValue;
 import Model.Value.Value;
 
 public class RelationalExpression implements Expression{
-    Expression leftExpression, rightExpression;
-    int relation;
+    private final Expression leftExpression, rightExpression;
+    private final int relation;
     public RelationalExpression(String relationString, Expression left, Expression right){
         this.leftExpression = left;
         this.rightExpression = right;

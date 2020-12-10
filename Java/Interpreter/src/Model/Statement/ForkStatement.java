@@ -8,7 +8,7 @@ import Model.ProgramState;
 import Model.Type.Type;
 
 public class ForkStatement implements Statement{
-    Statement statement;
+    private final Statement statement;
 
     public ForkStatement(Statement statement){
         this.statement = statement;

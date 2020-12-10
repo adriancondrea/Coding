@@ -13,8 +13,8 @@ import Model.Value.Value;
 import CustomException.StatementException;
 
 public class HeapAllocationStatement implements Statement{
-    String variableName;
-    Expression expression;
+    private final String variableName;
+    private final Expression expression;
 
     public HeapAllocationStatement(String variableName, Expression expression){
         this.variableName = variableName;

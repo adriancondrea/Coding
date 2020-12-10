@@ -19,8 +19,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ReadNumberFromFile implements Statement{
-    Expression expression;
-    String variableName;
+    private final Expression expression;
+    private final String variableName;
 
     public ReadNumberFromFile(Expression expression, String variableName){
         this.expression = expression;
@@ -72,13 +72,13 @@ public class ReadNumberFromFile implements Statement{
         Type variableType = typeEnvironment.lookup(variableName);
         Type expressionType = expression.typecheck(typeEnvironment);
         if(variableType.equals(new IntegerType())){
-            if(expressionType.equals(new IntegerType())){
+            if(expressionType.equals(new StringType())){
                 return typeEnvironment;
             }
             throw new TypecheckException("expression not of integer type!");
         }
         else {
-            throw new TypecheckException("variable not of integer type!");
+            throw new TypecheckException("variable not of string type!");
         }
     }
 

@@ -4,7 +4,7 @@ import Model.Type.IntegerType;
 import Model.Type.Type;
 
 public class NumberValue implements Value{
-    int value;
+    private final int value;
 
     public NumberValue(int value){
         this.value = value;
