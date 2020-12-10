@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MyList<T> implements ListInterface<T>{
-    LinkedList<T> list;
+    final LinkedList<T> list;
 
     //default constructor
     public MyList() {list = new LinkedList<>(); }
@@ -17,31 +17,39 @@ public class MyList<T> implements ListInterface<T>{
     }
     @Override
     public void add(T element) throws CollectionException {
-        list.add(element);
+        synchronized (list) {
+            list.add(element);
+        }
     }
 
     @Override
     public T pop() throws CollectionException {
-        if(list.isEmpty())
-            throw new CollectionException("list is empty!");
-        return list.pop();
+        synchronized (list) {
+            if (list.isEmpty())
+                throw new CollectionException("list is empty!");
+            return list.pop();
+        }
     }
 
     @Override
     public List<T> getList() {
-        return list;
+        synchronized (list) {
+            return list;
+        }
     }
 
     @Override
     public String toString() {
         //StringBuilder - mutable sequence of characters, because strings are immutable in Java.
         StringBuilder listToString = new StringBuilder();
-        for(T element: list){
-            if(element != null) {
-                listToString.append(element.toString());
-                listToString.append('\n');
+        synchronized (list) {
+            for (T element : list) {
+                if (element != null) {
+                    listToString.append(element.toString());
+                    listToString.append('\n');
+                }
             }
-            }
+        }
         if(listToString.toString().isEmpty())
             return "EMPTY\n";
         //convert the stringBuilder to string and return it

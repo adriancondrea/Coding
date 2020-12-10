@@ -14,38 +14,38 @@ public class MyHeap<V> implements HeapInterface<V>{
     }
 
     @Override
-    public int allocate(V value) {
+    public synchronized int allocate(V value) {
         heap.put(heapIndex.incrementAndGet(), value);
         return heapIndex.get();
     }
 
     @Override
-    public V getValue(int address) {
+    public synchronized V getValue(int address) {
         return heap.get(address);
     }
 
     @Override
-    public void putValueAtAddress(int address, V value) {
+    public synchronized void putValueAtAddress(int address, V value) {
         heap.put(address, value);
     }
 
     @Override
-    public V deallocateAddress(int address) {
+    public synchronized V deallocateAddress(int address) {
         return heap.remove(address);
     }
 
     @Override
-    public Map<Integer, V> getContent() {
+    public synchronized Map<Integer, V> getContent() {
         return heap;
     }
 
     @Override
-    public void setContent(Map<Integer, V> heap) {
+    public synchronized void setContent(Map<Integer, V> heap) {
         this.heap = heap;
     }
 
     @Override
-    public boolean allocatedAddress(int address) {
+    public synchronized boolean allocatedAddress(int address) {
         return heap.containsKey(address);
     }
 
