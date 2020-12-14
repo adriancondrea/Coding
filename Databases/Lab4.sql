@@ -440,6 +440,7 @@ exec procedure_add_test_view sponsors_View
 
 exec procedure_create_test 'test1'
 exec procedure_create_test 'test2'
+exec procedure_create_test 'test3'
 
 --test1 add tables /views
 exec procedure_add_TestTables 'Team', 'test1', 500, 4
@@ -466,3 +467,10 @@ exec procedure_test_results 'test2'
 
 select * from TestRuns
 select * from TestRunTables
+
+
+
+--test3 add tables / views
+exec procedure_add_TestTables 'Sponsor', 'test3', 10, 1
+
+exec procedure_run_test 'test3'

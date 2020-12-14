@@ -1,0 +1,953 @@
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+int v; Reference(int) a; v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+int v
+Reference(int) a; v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+int v
+Reference(int) a; v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+Reference(int) a; v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+Reference(int) a; v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+Reference(int) a
+v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+Reference(int) a
+v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+v = 10; new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+v = 10
+new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+v = 10
+new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+new(a, 22); fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+new(a, 22)
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+new(a, 22)
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(0, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a))); print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a)))
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+fork(writeHeap(a, 30); v = 32; print(v); print(readHeap(a)))
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+writeHeap(a, 30); v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+writeHeap(a, 30); v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(v)
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+writeHeap(a, 30)
+v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(v)
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+writeHeap(a, 30)
+v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 22
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+v = 32; print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 14~~
+		~~Execution Stack_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_14~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_14~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_14~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_14~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+v = 32
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+v = 32
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->10
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(v); print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(v)
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(v)
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+print(readHeap(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 11-12-2020 14:42:53
+
+~~id: 15~~
+		~~Execution Stack_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_15~~
+a->(1, int)
+v->32
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_15~~
+10
+30
+32
+30
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_15~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_15~~
+1 -> 30
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
