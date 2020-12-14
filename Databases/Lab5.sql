@@ -96,10 +96,11 @@ go
 
 
 --uses IX_Sponsor_SponsorName_asc
-SELECT T.TeamName, S.SponsorName, C.location, E.eventdate
-FROM Sponsor_Team ST  JOIN Team_Event TE on ST.TeamID = TE.TeamID
-JOIN Event E on E.EventID = TE.EventID
-JOIN Circuit C on C.CircuitID = E.CircuitID AND C.Location LIKE '%Bremgarten%'
-JOIN Team T on ST.TeamID = T.TeamID
-JOIN Sponsor S on ST.SponsorID = S.SponsorID AND S.SponsorName in ('Pirelli', 'Mobil 1')
-go
+--find sponsors that sponsor both McLaren and Mercedes
+SELECT S.SponsorName
+FROM Sponsor S, Team T, Sponsor_Team ST
+WHERE ST.TeamID = T.TeamID AND ST.SponsorID = S.SponsorID and T.TeamName LIKE  '%McLaren%'
+INTERSECT
+SELECT DISTINCT S1.SponsorName
+FROM Sponsor S1, Team T1, Sponsor_Team ST1
+WHERE ST1.TeamID = T1.TeamID AND ST1.SponsorID = S1.SponsorID and T1.TeamName LIKE  '%Mercedes%'
