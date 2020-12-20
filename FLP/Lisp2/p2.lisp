@@ -1,6 +1,6 @@
 #||
 Write recursive Lisp functions for the following problems (optionally, you may use MAP functions):
- A binary tree is memorised in the following two ways:
+A binary tree is memorised in the following two ways:
 (node no-subtrees list-subtree-1 list-subtree-2 ...) (1)
 (node (list-subtree-1) (list-subtree-2) ...) (2)
 As an example, the tree
@@ -50,6 +50,7 @@ is represented as
 (defun left_subtree(tree)
 	(traverse_left_subtree (cddr tree) 0 0)
 )
+
 (format t "left subtree of (a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) = ~a ~%" (left_subtree '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0)))
 (format t "left subtree of (b 2 c 1 i 0 f 1 g 0) = ~a ~%" (left_subtree ' (b 2 c 1 i 0 f 1 g 0)))
 (format t "left subtree of (c 1 i 0) = ~a ~%" (left_subtree ' (c 1 i 0)))
@@ -101,3 +102,8 @@ atlevel(l1,l2,..,ln, level) = {
 (format t "level 3 of (a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) = ~a ~%" (atlevel '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 3))
 (format t "level 4 of (a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) = ~a ~%" (atlevel '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 4))
 (format t "level 0 of (a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) = ~a ~%" (atlevel '(a 2 b 2 c 1 i 0 f 1 g 0 d 2 e 0 h 0) 0))
+
+(format t "~%level 1 of (A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) = ~a ~%" (atlevel '(A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) 1))
+(format t "level 2 of (A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) = ~a ~%" (atlevel '(A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) 2))
+(format t "level 3 of (A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) = ~a ~%" (atlevel '(A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) 3))
+(format t "level 4 of (A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) = ~a ~%" (atlevel '(A 2 B 2 D 0 E 1 H 0 C 2 F 1 I 0 G 0) 4))

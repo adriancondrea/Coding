@@ -74,19 +74,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Interpreter" />
       <extension name="coverage">
@@ -155,6 +142,8 @@
       <workItem from="1607514296384" duration="490000" />
       <workItem from="1607514938886" duration="554000" />
       <workItem from="1607597453979" duration="20074000" />
+      <workItem from="1608031761764" duration="227000" />
+      <workItem from="1608032075025" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="updated view">
       <created>1604259706418</created>
