@@ -15,4 +15,5 @@ public interface DictionaryInterface<K, V> {
     Map<K, V> getContent();
     DictionaryInterface<K, V> deepCopy();
     List<V> getValues();
+    Map<K, V> getElements();
 }

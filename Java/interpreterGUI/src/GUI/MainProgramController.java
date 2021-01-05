@@ -3,15 +3,14 @@ package GUI;
 import Controller.Controller;
 import CustomException.CustomException;
 import Model.ProgramState;
-import Model.Value.Value;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import javafx.util.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -86,9 +85,53 @@ public class MainProgramController {
         populateHeapTable();
     }
 
+    private void populateHeapTable() {
+        ProgramState runningProgram = getRunningProgramState();
+        List<Map.Entry<Integer, String>> heapString = new ArrayList<>();
+        runningProgram.getHeapTable()
+                .getContent()
+                .forEach((address, value) -> {
+                    heapString.add(Map.entry(address, value.toString()));
+                });
+        heapTableView.setItems(FXCollections.observableArrayList(heapString));
+        heapTableView.refresh();
+    }
+
+    private void populateSymbolTable() {
+        ProgramState runningProgram = getRunningProgramState();
+        List<Map.Entry<String, String>> symbolTableString = new ArrayList<>();
+        runningProgram.getSymbolTable()
+                .getContent()
+                .forEach((variableName, variableValue) -> {
+                    symbolTableString.add(Map.entry(variableName, variableValue.toString()));
+                });
+        symbolTableView.setItems(FXCollections.observableArrayList(symbolTableString));
+        symbolTableView.refresh();
+    }
+
+    @FXML
+    private void populateProgramStatesList() {
+        List<String> programStatesToBePopulated = controller
+                .getProgramStates()
+                .stream()
+                .map(programState -> programState.id)
+                .map(Objects::toString)
+                .collect(Collectors.toList());
+        programStatesListView.setItems(FXCollections.observableArrayList(programStatesToBePopulated));
+        programStatesListView.refresh();
+    }
+
     private void populateFileTable() {
         ProgramState runningProgram = getRunningProgramState();
-
+        List<String> fileTableToBePopulated = runningProgram
+                .getFileTable()
+                .getContent()
+                .keySet()
+                .stream()
+                .map(Objects::toString)
+                .collect(Collectors.toList());
+        fileTableListView.setItems(FXCollections.observableArrayList(fileTableToBePopulated));
+        fileTableListView.refresh();
     }
 
     private void populateOutput() {

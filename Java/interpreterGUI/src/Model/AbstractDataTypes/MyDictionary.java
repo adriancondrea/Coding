@@ -96,6 +96,11 @@ public class MyDictionary<K, V> implements DictionaryInterface<K,V>{
     }
 
     @Override
+    public Map<K, V> getElements() {
+        return map;
+    }
+
+    @Override
     public String toString() {
         StringBuilder dictionaryToString = new StringBuilder();
         synchronized (map) {
