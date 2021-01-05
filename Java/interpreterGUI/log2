@@ -1,0 +1,42 @@
+Log date: 06-01-2021 01:19:18
+
+~~id: 7~~
+		~~Execution Stack_7~~
+bool a; int v; a = true; (IF(a) THEN(v = 2)ELSE (v = 3)); print(v)
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_7~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_7~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_7~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_7~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 06-01-2021 01:19:18
+
+~~id: 8~~
+		~~Execution Stack_8~~
+bool a; int v; a = true; (IF(a) THEN(v = 2)ELSE (v = 3)); print(v)
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_8~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_8~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_8~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_8~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
