@@ -23,16 +23,17 @@ public class Main extends Application  {
         primaryStage.setX(0);
         primaryStage.show();
 
+        /*
         FXMLLoader mainWindowLoader = new FXMLLoader();
         mainWindowLoader.setLocation(getClass().getResource("mainWindow.fxml"));
         Parent mainWindowRoot = mainWindowLoader.load();
         MainProgramController mainProgramController = mainWindowLoader.getController();
-
         Stage stage = new Stage();
         stage.setTitle("Main Window");
         stage.setX(screenBounds.getMinX() + screenBounds.getWidth()/3);
         stage.setScene(new Scene(mainWindowRoot, screenBounds.getWidth() * 2 / 3, screenBounds.getHeight()));
         stage.show();
+         */
     }
 
 

@@ -1,6 +1,7 @@
 package GUI;
 
 import Controller.Controller;
+import CustomException.TypecheckException;
 import Model.ProgramState;
 import Model.Statement.Statement;
 import Repository.Repository;
@@ -46,6 +47,7 @@ public class ProgramSelectionController {
                 ProgramState programState = new ProgramState(programsList.get(selectedIndex));
                 Repository repository = new memoryRepository(programState, "log" + selectedIndex);
                 Controller controller = new Controller(repository);
+                controller.typecheck();
                 //controller.createState(programsList.get(selectedIndex)); //do i need to do this though? NO!
 
                 Rectangle2D screenBounds = Screen.getPrimary().getBounds();
@@ -61,6 +63,11 @@ public class ProgramSelectionController {
                 stage.setScene(new Scene(mainWindowRoot, screenBounds.getWidth() * 2 / 3, screenBounds.getHeight()));
                 stage.show();
             }
+            catch(TypecheckException typecheckException){
+                Alert alert = new Alert(Alert.AlertType.ERROR, typecheckException.getMessage(), ButtonType.CLOSE);
+                alert.showAndWait();
+            }
+
             catch(IOException exception){
                 exception.printStackTrace();
             }
