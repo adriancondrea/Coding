@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 
 public class MainProgramController {
     private Controller controller;
-    private List<ProgramState> programStateList;
 
     @FXML
     private TextField numberOfProgramStatesTextField;
@@ -58,7 +57,7 @@ public class MainProgramController {
 
     @FXML
     public void initialize(){
-     //initialize heapTableView
+     //initialize heapTableView, wrap the column in Properties that are observable
      variableAddressColumn.setCellValueFactory(feature -> new SimpleIntegerProperty(feature.getValue().getKey()).asObject());
      valueTableColumn.setCellValueFactory(feature -> new SimpleStringProperty(feature.getValue().getValue()));
 
@@ -86,11 +85,10 @@ public class MainProgramController {
     private void populateHeapTable() {
         ProgramState runningProgram = getRunningProgramState();
         List<Map.Entry<Integer, String>> heapString = new ArrayList<>();
+        assert runningProgram != null;
         runningProgram.getHeapTable()
                 .getContent()
-                .forEach((address, value) -> {
-                    heapString.add(Map.entry(address, value.toString()));
-                });
+                .forEach((address, value) -> heapString.add(Map.entry(address, value.toString())));
         heapTableView.setItems(FXCollections.observableArrayList(heapString));
         heapTableView.refresh();
     }
@@ -98,11 +96,10 @@ public class MainProgramController {
     private void populateSymbolTable() {
         ProgramState runningProgram = getRunningProgramState();
         List<Map.Entry<String, String>> symbolTableString = new ArrayList<>();
+        assert runningProgram != null;
         runningProgram.getSymbolTable()
                 .getContent()
-                .forEach((variableName, variableValue) -> {
-                    symbolTableString.add(Map.entry(variableName, variableValue.toString()));
-                });
+                .forEach((variableName, variableValue) -> symbolTableString.add(Map.entry(variableName, variableValue.toString())));
         symbolTableView.setItems(FXCollections.observableArrayList(symbolTableString));
         symbolTableView.refresh();
     }
@@ -121,6 +118,7 @@ public class MainProgramController {
 
     private void populateFileTable() {
         ProgramState runningProgram = getRunningProgramState();
+        assert runningProgram != null;
         List<String> fileTableToBePopulated = runningProgram
                 .getFileTable()
                 .getContent()
@@ -134,6 +132,7 @@ public class MainProgramController {
 
     private void populateOutput() {
         ProgramState runningProgram = getRunningProgramState();
+        assert runningProgram != null;
         List<String> outputToBePopulated = runningProgram
                 .getOutputList()
                 .getElements()
@@ -146,6 +145,7 @@ public class MainProgramController {
 
     private void populateExecutionStack() {
         ProgramState runningProgram = getRunningProgramState();
+        assert runningProgram != null;
         List<String> stackToBePopulated = runningProgram
                 .getExecutionStack()
                 .getContent()
@@ -199,6 +199,6 @@ public class MainProgramController {
 
     public void setController(Controller controller) {
         this.controller = controller;
-        this.programStateList = controller.getProgramStates();
+        controller.getProgramStates();
     }
 }

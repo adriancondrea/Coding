@@ -10,6 +10,7 @@ import Model.Value.BooleanValue;
 import Model.Value.NumberValue;
 import Model.Value.StringValue;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class HardcodedPrograms {
@@ -137,6 +138,16 @@ public class HardcodedPrograms {
                                                 new WhileStatement(new RelationalExpression("!=", new VariableNameExpression("a"), new ValueExpression(new NumberValue(0))), new NopStatement())
                                         )))));
         programs.add(ex15);
+
         return programs;
+    }
+
+    public static void deletePreviousLogs() {
+        int numberOfPrograms = getHardcodedPrograms().size();
+        for(int i = 1; i <= numberOfPrograms; i++) {
+            File fileToDelete = new File("log" + i + ".txt");
+            if(fileToDelete.delete())
+                System.out.println("deleted log file " + fileToDelete.toString());
+        }
     }
 }

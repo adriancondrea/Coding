@@ -20,17 +20,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ProgramSelectionController {
-   private MainProgramController mainProgramController;
 
-   @FXML
+    @FXML
     private ListView<Statement> programsListView;
 
     @FXML
     private Button programSelectionButton;
-
-    public void setMainProgramController(MainProgramController mainProgramController) {
-        this.mainProgramController = mainProgramController;
-    }
 
     @FXML
     public void initialize(){
@@ -45,10 +40,9 @@ public class ProgramSelectionController {
                     return;
                 }
                 ProgramState programState = new ProgramState(programsList.get(selectedIndex));
-                Repository repository = new memoryRepository(programState, "log" + selectedIndex);
+                Repository repository = new memoryRepository(programState, "log" + (selectedIndex + 1) + ".txt");
                 Controller controller = new Controller(repository);
                 controller.typecheck();
-                //controller.createState(programsList.get(selectedIndex)); //do i need to do this though? NO!
 
                 Rectangle2D screenBounds = Screen.getPrimary().getBounds();
                 FXMLLoader mainWindowLoader = new FXMLLoader();

@@ -12,28 +12,17 @@ public class Main extends Application  {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        HardcodedPrograms.deletePreviousLogs();
         Rectangle2D screenBounds = Screen.getPrimary().getBounds();
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("programSelectionWindow.fxml"));
         Parent root = loader.load();
-        ProgramSelectionController programSelectionController = loader.getController();
+        loader.getController();
         primaryStage.setTitle("Program Selection Window");
         primaryStage.setScene(new Scene(root, screenBounds.getWidth() / 3, screenBounds.getHeight()));
         primaryStage.setX(0);
         primaryStage.show();
-
-        /*
-        FXMLLoader mainWindowLoader = new FXMLLoader();
-        mainWindowLoader.setLocation(getClass().getResource("mainWindow.fxml"));
-        Parent mainWindowRoot = mainWindowLoader.load();
-        MainProgramController mainProgramController = mainWindowLoader.getController();
-        Stage stage = new Stage();
-        stage.setTitle("Main Window");
-        stage.setX(screenBounds.getMinX() + screenBounds.getWidth()/3);
-        stage.setScene(new Scene(mainWindowRoot, screenBounds.getWidth() * 2 / 3, screenBounds.getHeight()));
-        stage.show();
-         */
     }
 
 
