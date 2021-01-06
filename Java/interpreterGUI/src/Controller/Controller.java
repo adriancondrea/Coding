@@ -28,6 +28,29 @@ public class Controller {
         return repository.getProgramStates();
     }
 
+    public void oneStepExecution(){
+        List<ProgramState> programStateList = removeCompletedPrograms(repository.getProgramStates());
+        executor = Executors.newFixedThreadPool(2);
+        ProgramState state = programStateList.get(0);
+        state.getHeapTable().setContent(
+                garbageCollector(
+                        getSymbolTableAddresses(
+                                programStateList.stream().map(programState -> programState.getSymbolTable().getContent().values()).collect(Collectors.toList()),
+                                state.getHeapTable().getContent()
+                        ),
+                        state.getHeapTable().getContent()
+                )
+        );
+        oneStepForAllPrograms(programStateList);
+        List<ProgramState> newProgramStateList = removeCompletedPrograms(programStateList);
+        if(newProgramStateList.isEmpty()){
+            repository.setProgramStates(programStateList);
+        }
+        else {
+            repository.setProgramStates(newProgramStateList);
+        }
+        executor.shutdown();
+    }
     public void oneStepForAllPrograms(List<ProgramState> programStates){
         //before the execution, print the programState list into the log file
         programStates.forEach(repository::logProgramStateExecution);
@@ -47,9 +70,12 @@ public class Controller {
                         try {
                             return future.get();
                         } catch (CustomException | InterruptedException | ExecutionException e) {
+                            /*HERE------------------------------------------------------------------------------------------
                             System.out.println(e.getMessage());
                             System.exit(1);
                             return null;
+                             */
+                            throw new CustomException(e.getMessage());
                         }
                     })
                     .filter(Objects::nonNull)

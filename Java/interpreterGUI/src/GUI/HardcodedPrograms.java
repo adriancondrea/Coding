@@ -1,4 +1,4 @@
-package commandLineView;
+package GUI;
 
 import Model.Expression.*;
 import Model.Statement.*;
@@ -126,6 +126,17 @@ public class HardcodedPrograms {
                                                         new PrintStatement(new ReadHeapExpression(new VariableNameExpression("a")))))))));
         programs.add(ex14);
 
+        Statement ex15 = new CompoundStatement(new VariableDeclarationStatement("a", new IntegerType()),
+                new CompoundStatement(new VariableDeclarationStatement("b", new IntegerType()),
+                        new CompoundStatement(new AssignmentStatement("a", new ValueExpression(new NumberValue(1))),
+                                new CompoundStatement(new AssignmentStatement("b", new ValueExpression(new NumberValue(100))),
+                                        new CompoundStatement(
+                                                new ForkStatement(new WhileStatement(new RelationalExpression("<", new VariableNameExpression("a"), new ValueExpression(new NumberValue(100))),
+                                                        new CompoundStatement(new AssignmentStatement("a", new ArithmeticExpression('+', new VariableNameExpression("a"), new ValueExpression(new NumberValue(1)))),
+                                                                new AssignmentStatement("b", new ArithmeticExpression('-', new VariableNameExpression("b"), new ValueExpression(new NumberValue(1))))))),
+                                                new WhileStatement(new RelationalExpression("!=", new VariableNameExpression("a"), new ValueExpression(new NumberValue(0))), new NopStatement())
+                                        )))));
+        programs.add(ex15);
         return programs;
     }
 }

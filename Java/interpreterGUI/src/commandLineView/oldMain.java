@@ -35,7 +35,6 @@ public class oldMain {
 
     public static void main(String[] args) {
         deletePreviousLogs();
-
         Statement ex1 = new CompoundStatement(new VariableDeclarationStatement("v",new IntegerType()),
                         new CompoundStatement(new AssignmentStatement("v",new ValueExpression(new NumberValue(2))),
                         new PrintStatement(new VariableNameExpression("v"))));

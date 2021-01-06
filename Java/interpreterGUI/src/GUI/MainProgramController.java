@@ -71,9 +71,7 @@ public class MainProgramController {
      programStatesListView.getSelectionModel().select(1);
 
      executeOneStepButton.setOnAction(actionEvent -> oneStepExecution());
-     programStatesListView.setOnMouseClicked(mouseEvent -> {
-         populateListsTables();
-     });
+     programStatesListView.setOnMouseClicked(mouseEvent -> populateListsTables());
     }
 
     public void populateListsTables() {
@@ -179,7 +177,7 @@ public class MainProgramController {
                 closeWindow();
                 return;
             }
-            controller.oneStepForAllPrograms(programStateList); //TODO:WARNING:HERE MAY BE THE MISTAKE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            controller.oneStepExecution();
             populateListsTables();
             numberOfProgramStatesTextField.clear();
             numberOfProgramStatesTextField.setText(Integer.toString(controller.getProgramStates().size()));
