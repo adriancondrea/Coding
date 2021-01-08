@@ -200,5 +200,6 @@ public class MainProgramController {
     public void setController(Controller controller) {
         this.controller = controller;
         controller.getProgramStates();
+        populateListsTables();
     }
 }
