@@ -1,0 +1,128 @@
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a; a = 5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a
+a = 5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a
+a = 5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+a = 5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+a = 5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 22-01-2021 13:46:42
+
+~~id: 1~~
+		~~Execution Stack_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->5
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+

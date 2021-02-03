@@ -4,10 +4,11 @@ Solve the following problems using MAP functions.
 ||#
 
 #||
-checkMember(l1,l2,..,ln, value) = { (T), l1 = value
-									U i = 1, n checkMember(l1, value), l1 - list
-									empty list, otherwise
-									}
+checkMember(l, value) = { (T), l = value
+						  U i = 1, n checkMember(l[i], value), l = l1..ln
+						  empty list, otherwise
+						}
+
 The result of this function is a list containing T for each element = value or if element is a list that contains value.
 We use mapcan instead of mapcar, because we want to concatenate the result in one single list, insead of having a non - linear list
 If we were to use mapcar instead of mapcan, every time it doesn't find the element it would add nil to the list, and add (T) when it finds it.

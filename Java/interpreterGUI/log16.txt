@@ -1,0 +1,2590 @@
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a; (WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+int a
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:29
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:30
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:31
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:32
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:33
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:34
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:35
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:36
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:37
+
+~~id: 1~~
+		~~Execution Stack_1~~
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
+Log date: 07-01-2021 00:08:37
+
+~~id: 1~~
+		~~Execution Stack_1~~
+print(a)
+(WHILE(a < 100) print(a))
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Symbol Table_1~~
+a->0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Output List_1~~
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~File Table_1~~
+EMPTY
+~~~~~~~~~~~~~~~~~~~~~~~~
+		~~Heap Table_1~~
+~~~~~~~~~~END OF STATE~~~~~~~~~~
+Log ended!
+
+
+
