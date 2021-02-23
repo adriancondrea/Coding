@@ -1,13 +1,9 @@
 import smtplib
+import getpass
 import ssl
 from time import sleep
 import requests
 from bs4 import BeautifulSoup
-
-sender_email = "adrian227condrea@gmail.com"
-password = "TestMail123"
-receiver_email = "adriancondrea2000@gmail.com"
-url = "https://www.amd.com/en/direct-buy/ro"
 
 
 def get_page_html(url):
@@ -57,19 +53,24 @@ def send_mail(message):
         print(e)
 
 
-def stock_checker(url):
-    previous_stock = get_items_in_stock(url)
+def stock_checker(given_url):
+    previous_stock = get_items_in_stock(given_url)
     # Testing:
     # send_mail("Stock changed!")
     while True:
-        current_stock = get_items_in_stock(url)
+        current_stock = get_items_in_stock(given_url)
         if len(current_stock) > len(previous_stock):
             send_mail("New Products Available!")
         else:
             print("Same stock!")
         previous_stock = current_stock
-        sleep(10)
+        sleep(60)
 
 
 if __name__ == "__main__":
+    sender_email = input("Sender email:")
+    password = getpass.getpass("Password:")
+    receiver_email = input("Receiver email: ")
+    checking_frequency = int(input("Frequency to check: "))
+    url = "https://www.amd.com/en/direct-buy/ro"
     stock_checker(url)
